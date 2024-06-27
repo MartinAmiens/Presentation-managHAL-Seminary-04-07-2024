@@ -1,0 +1,6 @@
+---
+format: 
+  revealjs:
+    output: docs/index.html
+
+---
