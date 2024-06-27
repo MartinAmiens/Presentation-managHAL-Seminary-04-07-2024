@@ -1,8 +1,6 @@
 ---
 title: "presentation-managHAL"
 author: "Amiens Martin"
-format: 
-  revealjs
 editor: visual
 ---
 
