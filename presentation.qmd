@@ -17,12 +17,28 @@ library(sbm, quietly = TRUE)
 
 ## Sciences Ouvertes
 
-commencer avec de l'humour ? une de mes histoire ? faire une boucle entre le debut et la fin de ma présentation ? un fait shock ? puis relier le tout à ce dont je vais parler 
+**Appel de Jussieu (2017)** : Engagement d'AgroParisTech pour la bibliodiversité et contre la domination des grands éditeurs.
+
+**Politique de science ouverte (2020) **: Adoption par AgroParisTech et INRAE pour faciliter la diffusion libre et transparente des recherches.
+
+**Principes FAIR**: Gestion des données de recherche selon les principes Findable, Accessible, Interoperable, Reusable.
 
 ::: {.notes}
+commencer avec de l'humour ? une de mes histoires ? faire une boucle entre le debut et la fin de ma présentation ? un fait shock ? puis relier le tout à ce dont je vais parler 
+Benefices pour ceux qui ecoute ?
+
 **AgroParisTech** crée le 2 janvier 2023 une **cellule HAL**, dirigée par la Direction de la Recherche, de l’Innovation et du Transfert Technologique, et par la Direction de la Documentation et du Patrimoine Culturel. Cette cellule facilite l'intégration de l'archive ouverte HAL dans la communauté de recherche d'AgroParisTech et veille à la qualité des métadonnées. **HAL**, ou **HyperArticles en Lignes**, est "l’archive nationale pour la diffusion ouverte des résultats de recherche" <https://about.hal.science/>. Elle est une plateforme en ligne développé en 2001 par le Centre pour la communication scientifique directe du **CNRS**.
 :::
 
+## Cellule HAL
+
+**Date de création **: 2 janvier 2023.
+
+***Objectif** : Intégration de l'archive ouverte HAL dans la communauté de recherche d'AgroParisTech et assurance de la qualité des métadonnées.
+
+**Description de HAL **: Archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.
+
+**Utilisation d'API **: Extraction et analyse des données via des outils comme RStudio.
 
 ## {ManagHAL}, package R d'extraction de données bibliométriques HAL et d'analyse de réseaux
 
