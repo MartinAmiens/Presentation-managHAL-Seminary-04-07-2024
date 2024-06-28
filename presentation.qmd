@@ -28,9 +28,28 @@ When you click the **Render** button a presentation will be generated that inclu
 
 ## Méthodes informatiques
 
+:::: {.columns}
+
+::: {.column width="40%"}
+contents...
+:::
+
+::: {.column width="60%"}
+contents...
+:::
+
+::::
+
 # Résultats 
 
 ## Accessibilité et généricité de {managHAL}
+
+::: {.incremental}
+
+- Eat spaghetti
+- Drink wine
+
+:::
 
 ## Ajout de fonctionnalité à {managHAL}
 
