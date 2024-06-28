@@ -17,6 +17,8 @@ library(sbm, quietly = TRUE)
 
 ## Sciences Ouvertes
 
+commencer avec de l'humour ? une de mes histoire ? faire une boucle entre le debut et la fin de ma présentation ? un fait shock ? puis relier le tout à ce dont je vais parler 
+
 ::: {.notes}
 **AgroParisTech** crée le 2 janvier 2023 une **cellule HAL**, dirigée par la Direction de la Recherche, de l’Innovation et du Transfert Technologique, et par la Direction de la Documentation et du Patrimoine Culturel. Cette cellule facilite l'intégration de l'archive ouverte HAL dans la communauté de recherche d'AgroParisTech et veille à la qualité des métadonnées. **HAL**, ou **HyperArticles en Lignes**, est "l’archive nationale pour la diffusion ouverte des résultats de recherche" <https://about.hal.science/>. Elle est une plateforme en ligne développé en 2001 par le Centre pour la communication scientifique directe du **CNRS**.
 :::
@@ -26,6 +28,8 @@ library(sbm, quietly = TRUE)
 
 ::: {.notes}
 Les outils pour réaliser des analyses bibliométriques se répartissent en trois catégories, "general bibliometric and performance analysis, science mapping analysis, and libraries" <https://revista.profesionaldelainformacion.com/index.php/EPI/article/view/epi.2020.ene.03> ou analyse générale bibliométrique et de performances, analyses par cartographie scientifique et librairies / packages. Le package {managHAL} se trouve dans les troisième et deuxième catégories. Il existe à ce jour d'autres outils d'analyses bibliométriques mais la majorité ne permettent pas de travailler via l'api HAL et se concentrent sur webofscience, scopus, google scholar,... Il existe des outils d’extraction de publications HAL, cependant aucun package R ne permet actuellement d'extraire ces données pour réaliser des analyses statisistiques. Pour répondre à ce besoin, Théodore Vanrengterghem a commencé à développer le package R {managHAL}. Le package permet l’extraction de données HAL et la création de bilans bibliographiques. En cours de développement, ce package ne permet pas actuellement la réalisation d'analyses bibliométriques.
+
+Ainsi, durant mes 2 mois et 17 jours de stage au sein de l'unité mixte de recherche Mathématiques et Informatique Appliquées (MIA) - Paris Saclay, associée aux tutelles AgroParisTech, INRAE et Université Paris Saclay, j’ai travaillé sur rendre le package {managHAL} plus accessible et utilisable par d'autres unités de recherches que l'unité MIA - Paris Saclay. J'ai aussi travaillé sur la programmation et l’intégration d’outils d’analyse statistique de réseau au sein du package. Encadré par deux tuteurs, Julie Aubert et Pierre Barbillon, j’ai contribué à la mise en forme du package et à la création de fonctions spécifiques.
 :::
 
 When you click the **Render** button a document will be generated that includes:
@@ -67,6 +71,7 @@ unipartite_graph <- plot(unipartite, main = "Réseau Unipartite")
 
 ## Accessibilité et généricité de {managHAL}
 
+me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l'ancienne version du apackage, puis des résultats obtenu avec la nouvelle version du package (surtout ne aps mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)
 ::: {.incremental}
 
 - Eat spaghetti
@@ -76,7 +81,11 @@ unipartite_graph <- plot(unipartite, main = "Réseau Unipartite")
 
 ## Ajout de fonctionnalité à {managHAL}
 
+je veux parler de l'ajout de fonction capable de créer un réseau, puis de l'analyser (si il est trop grand analyser les composantes connexes)
+
 # Discussion, Perspectives et avenir du package
 
 # Questions
 
+## quelles sont les questions qui peuvent venir au cours de ma présentation,
+## quelles sont les choses dont je n'ai pas parlé au cours de ma présentation,
