@@ -1,7 +1,17 @@
 ---
-title: "{ManagHAL}, données bibliométriques, réseaux et analyses statistiques de réseaux"
-author: "Amiens Martin"
+title: "Manipulation de données bibliométrique via {managHAL}"
+author: "Martin AMIENS"
 ---
+```{r, include=FALSE, echo = FALSE, warning = FALSE, message=FALSE}
+library(igraph, quietly = TRUE)
+library(tidyr, quietly = TRUE)
+library(managHAL, quietly = TRUE)
+library(dplyr, quietly = TRUE)
+library(reshape2, quietly = TRUE)
+library (readxl, quietly = TRUE)
+library(visNetwork, quietly = TRUE)
+library(sbm, quietly = TRUE)
+```
 
 # Introduction
 
@@ -38,17 +48,20 @@ When you click the **Render** button a presentation will be generated that inclu
 
 ## Méthodes informatiques
 
-:::: {.columns}
 
-::: {.column width="40%"}
-contents...
-:::
 
-::: {.column width="60%"}
-contents...
-:::
 
-::::
+```{r exemple de reseau, tidy.opts=list(width.cutoff=50)}
+#| echo: true
+#| output-location: slide
+# Création d'un réseau unipartite
+set.seed(42) # Pour la reproductibilité 
+unipartite <- erdos.renyi.game(10, 0.3)
+unipartite_graph <- plot(unipartite, main = "Réseau Unipartite")
+```
+
+
+
 
 # Résultats 
 
