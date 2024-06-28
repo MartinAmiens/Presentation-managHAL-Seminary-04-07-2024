@@ -344,10 +344,35 @@ Amiens Martin
 </section>
 <section id="sciences-ouvertes" class="slide level2">
 <h2>Sciences Ouvertes</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
+<aside class="notes">
+<p><strong>AgroParisTech</strong> crée le 2 janvier 2023 une <strong>cellule HAL</strong>, dirigée par la Direction de la Recherche, de l’Innovation et du Transfert Technologique, et par la Direction de la Documentation et du Patrimoine Culturel. Cette cellule facilite l’intégration de l’archive ouverte HAL dans la communauté de recherche d’AgroParisTech et veille à la qualité des métadonnées. <strong>HAL</strong>, ou <strong>HyperArticles en Lignes</strong>, est “l’archive nationale pour la diffusion ouverte des résultats de recherche” <a href="https://about.hal.science/" class="uri">https://about.hal.science/</a>. Elle est une plateforme en ligne développé en 2001 par le Centre pour la communication scientifique directe du <strong>CNRS</strong>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="managhal-package-r-dextraction-de-données-bibliométriques-hal-et-danalyse-de-réseaux" class="slide level2">
 <h2>{ManagHAL}, package R d’extraction de données bibliométriques HAL et d’analyse de réseaux</h2>
+<aside class="notes">
+<p>Les outils pour réaliser des analyses bibliométriques se répartissent en trois catégories, “general bibliometric and performance analysis, science mapping analysis, and libraries” <a href="https://revista.profesionaldelainformacion.com/index.php/EPI/article/view/epi.2020.ene.03" class="uri">https://revista.profesionaldelainformacion.com/index.php/EPI/article/view/epi.2020.ene.03</a> ou analyse générale bibliométrique et de performances, analyses par cartographie scientifique et librairies / packages. Le package {managHAL} se trouve dans les troisième et deuxième catégories. Il existe à ce jour d’autres outils d’analyses bibliométriques mais la majorité ne permettent pas de travailler via l’api HAL et se concentrent sur webofscience, scopus, google scholar,… Il existe des outils d’extraction de publications HAL, cependant aucun package R ne permet actuellement d’extraire ces données pour réaliser des analyses statisistiques. Pour répondre à ce besoin, Théodore Vanrengterghem a commencé à développer le package R {managHAL}. Le package permet l’extraction de données HAL et la création de bilans bibliographiques. En cours de développement, ce package ne permet pas actuellement la réalisation d’analyses bibliométriques.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
 <ul>
 <li>Content authored with markdown</li>
@@ -359,8 +384,21 @@ Amiens Martin
 <h1>Méthodes</h1>
 
 </section>
-<section id="modèle-de-graphe-aléatoire" class="slide level2">
-<h2>Modèle de graphe aléatoire</h2>
+<section id="réseaux-et-modèle-de-graphe-aléatoire" class="slide level2">
+<h2>Réseaux et modèle de graphe aléatoire</h2>
+<aside class="notes">
+<p>Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Dans le cadre du package {managHAl}, j’utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l’existence de publications scientifiques co-écrite par les deux noeuds. La taille d’un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d’une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l’analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d’analyse statistique dans de nombreux domaines. Par exemple, des réseaux de régulations de gènes sont réalisés à partir de données de co-expression. Il est possible de donner d’autres exemples comme les analyses de réseaux d’interactions entre des espèces (réseau trophique) réalisées en écologie</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
