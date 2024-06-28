@@ -1,24 +1,40 @@
 ---
-title: "presentation-managHAL"
+title: "{ManagHAL}, données bibliométriques, réseaux et analyses statistiques de réseaux"
 author: "Amiens Martin"
-editor: visual
 ---
 
-## Quarto
+# Introduction
+
+## Sciences Ouvertes
 
 Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
 
-## Bullets
+## {ManagHAL}, package R d'extraction de données bibliométriques HAL et d'analyse de réseaux
 
 When you click the **Render** button a document will be generated that includes:
 
 -   Content authored with markdown
 -   Output from executable code
 
-## Code
+# Méthodes
+
+## Modèle de graphe aléatoire
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
 1 + 1
 ```
+
+## Méthodes informatiques
+
+# Résultats 
+
+## Accessibilité et généricité de {managHAL}
+
+## Ajout de fonctionnalité à {managHAL}
+
+# Discussion, Perspectives et avenir du package
+
+# Questions
+
