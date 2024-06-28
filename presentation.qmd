@@ -7,11 +7,16 @@ author: "Amiens Martin"
 
 ## Sciences Ouvertes
 
-
+::: {.notes}
 **AgroParisTech** crée le 2 janvier 2023 une **cellule HAL**, dirigée par la Direction de la Recherche, de l’Innovation et du Transfert Technologique, et par la Direction de la Documentation et du Patrimoine Culturel. Cette cellule facilite l'intégration de l'archive ouverte HAL dans la communauté de recherche d'AgroParisTech et veille à la qualité des métadonnées. **HAL**, ou **HyperArticles en Lignes**, est "l’archive nationale pour la diffusion ouverte des résultats de recherche" <https://about.hal.science/>. Elle est une plateforme en ligne développé en 2001 par le Centre pour la communication scientifique directe du **CNRS**.
+:::
 
 
 ## {ManagHAL}, package R d'extraction de données bibliométriques HAL et d'analyse de réseaux
+
+::: {.notes}
+Les outils pour réaliser des analyses bibliométriques se répartissent en trois catégories, "general bibliometric and performance analysis, science mapping analysis, and libraries" <https://revista.profesionaldelainformacion.com/index.php/EPI/article/view/epi.2020.ene.03> ou analyse générale bibliométrique et de performances, analyses par cartographie scientifique et librairies / packages. Le package {managHAL} se trouve dans les troisième et deuxième catégories. Il existe à ce jour d'autres outils d'analyses bibliométriques mais la majorité ne permettent pas de travailler via l'api HAL et se concentrent sur webofscience, scopus, google scholar,... Il existe des outils d’extraction de publications HAL, cependant aucun package R ne permet actuellement d'extraire ces données pour réaliser des analyses statisistiques. Pour répondre à ce besoin, Théodore Vanrengterghem a commencé à développer le package R {managHAL}. Le package permet l’extraction de données HAL et la création de bilans bibliographiques. En cours de développement, ce package ne permet pas actuellement la réalisation d'analyses bibliométriques.
+:::
 
 When you click the **Render** button a document will be generated that includes:
 
@@ -20,7 +25,10 @@ When you click the **Render** button a document will be generated that includes:
 
 # Méthodes
 
-## Modèle de graphe aléatoire
+## Réseaux et modèle de graphe aléatoire
+::: {.notes}
+Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Dans le cadre du package {managHAl}, j'utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l'existence de publications scientifiques co-écrite par les deux noeuds. La taille d'un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d'une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l'analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d'analyse statistique dans de nombreux domaines. Par exemple, des réseaux de régulations de gènes sont réalisés à partir de données de co-expression. Il est possible de donner d'autres exemples comme les analyses de réseaux d'interactions entre des espèces (réseau trophique) réalisées en écologie
+:::
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
