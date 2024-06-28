@@ -1,8 +1,7 @@
 project:
+  title: ManagHAL
   type: website
-
-output-dir: docs
-
+  output-dir: docs
 format:
   revealjs:
     slide-number: true
