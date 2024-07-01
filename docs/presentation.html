@@ -427,12 +427,12 @@ Martin AMIENS
           display:block!important;
       }</style></aside>
 </section>
-<section id="cellule-hal" class="slide level2">
-<h2>Cellule HAL</h2>
-<p><strong>Date de création </strong>: 2 janvier 2023.</p>
-<p>*<strong>Objectif</strong> : Intégration de l’archive ouverte HAL dans la communauté de recherche d’AgroParisTech et assurance de la qualité des métadonnées.</p>
+<section id="hal-archive-nationale-ouverte" class="slide level2">
+<h2>HAL, archive nationale ouverte</h2>
 <p><strong>Description de HAL </strong>: Archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.</p>
-<p><strong>Utilisation d’API </strong>: Extraction et analyse des données via des outils comme RStudio.</p>
+<p><strong>Utilisation d’API </strong>: Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ?</p>
+<p><strong>Création d’une cellule HAL</strong>: 2 janvier 2023.</p>
+<p><strong>Objectif</strong> : Intégration de l’archive ouverte HAL dans la communauté de recherche d’AgroParisTech et assurance de la qualité des métadonnées.</p>
 </section>
 <section id="managhal-package-r-dextraction-de-données-bibliométriques-hal-et-danalyse-de-réseaux" class="slide level2">
 <h2>{ManagHAL}, package R d’extraction de données bibliométriques HAL et d’analyse de réseaux</h2>
@@ -450,11 +450,7 @@ Martin AMIENS
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
-<ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
-</ul>
+<p>Je souhaite parler de managHAL en général, de ce qu’il etait possible de faire avant mon stage via les fonctions du package. et fair ele lien vers les réseaux.</p>
 </section></section>
 <section>
 <section id="méthodes" class="title-slide slide level1 center">
@@ -476,23 +472,16 @@ Martin AMIENS
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<p>Je veux faire une courte présentation des réseaux, et des modèles possible à partir de ces réseaux pour réaliser de l’analyse statistique de réseaux.</p>
+<p>peut etre mettre des exemples de réseaux classiques genre trophique, … etc</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-</section>
-<section id="méthodes-informatiques" class="slide level2">
-<h2>Méthodes informatiques</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Création d'un réseau unipartite</span></span>
-<span id="cb2-2"><a></a><span class="fu">set.seed</span>(<span class="dv">42</span>) <span class="co"># Pour la reproductibilité </span></span>
-<span id="cb2-3"><a></a>unipartite <span class="ot">&lt;-</span> <span class="fu">erdos.renyi.game</span>(<span class="dv">10</span>, <span class="fl">0.3</span>)</span>
-<span id="cb2-4"><a></a>unipartite_graph <span class="ot">&lt;-</span> <span class="fu">plot</span>(unipartite, <span class="at">main =</span> <span class="st">"Réseau Unipartite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Création d'un réseau unipartite</span></span>
+<span id="cb1-2"><a></a><span class="fu">set.seed</span>(<span class="dv">42</span>) <span class="co"># Pour la reproductibilité </span></span>
+<span id="cb1-3"><a></a>unipartite <span class="ot">&lt;-</span> <span class="fu">erdos.renyi.game</span>(<span class="dv">10</span>, <span class="fl">0.3</span>)</span>
+<span id="cb1-4"><a></a>unipartite_graph <span class="ot">&lt;-</span> <span class="fu">plot</span>(unipartite, <span class="at">main =</span> <span class="st">"Réseau Unipartite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
-</section><section id="méthodes-informatiques-output" class="slide level2 output-location-slide"><h2>Méthodes informatiques</h2><div class="cell output-location-slide">
+</section><section id="réseaux-et-modèle-de-graphe-aléatoire-output" class="slide level2 output-location-slide"><h2>Réseaux et modèle de graphe aléatoire</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
 <div>
 <figure>
@@ -508,7 +497,7 @@ Martin AMIENS
 </section>
 <section id="accessibilité-et-généricité-de-managhal" class="slide level2">
 <h2>Accessibilité et généricité de {managHAL}</h2>
-<p>me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l’ancienne version du apackage, puis des résultats obtenu avec la nouvelle version du package (surtout ne aps mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise) ::: {.incremental}</p>
+<p>me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l’ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants… mettre aussi les résultats obtenus avec un sbm. c’est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des daipos des autres partie et les mettre dans les diapos questions. ::: {.incremental}</p>
 <ul>
 <li>Eat spaghetti</li>
 <li>Drink wine</li>
@@ -528,6 +517,10 @@ Martin AMIENS
 <section id="questions" class="title-slide slide level1 center">
 <h1>Questions</h1>
 
+</section>
+<section id="méthodes-informatiques" class="slide level2">
+<h2>Méthodes informatiques</h2>
+<p>ne faire que si j’ai le temps, les mettres dans les diapos de questions possible ?</p>
 </section>
 <section id="quelles-sont-les-questions-qui-peuvent-venir-au-cours-de-ma-présentation" class="slide level2">
 <h2>quelles sont les questions qui peuvent venir au cours de ma présentation,</h2>

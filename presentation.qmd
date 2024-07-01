@@ -30,15 +30,17 @@ Benefices pour ceux qui ecoute ?
 **AgroParisTech** crée le 2 janvier 2023 une **cellule HAL**, dirigée par la Direction de la Recherche, de l’Innovation et du Transfert Technologique, et par la Direction de la Documentation et du Patrimoine Culturel. Cette cellule facilite l'intégration de l'archive ouverte HAL dans la communauté de recherche d'AgroParisTech et veille à la qualité des métadonnées. **HAL**, ou **HyperArticles en Lignes**, est "l’archive nationale pour la diffusion ouverte des résultats de recherche" <https://about.hal.science/>. Elle est une plateforme en ligne développé en 2001 par le Centre pour la communication scientifique directe du **CNRS**.
 :::
 
-## Cellule HAL
-
-**Date de création **: 2 janvier 2023.
-
-***Objectif** : Intégration de l'archive ouverte HAL dans la communauté de recherche d'AgroParisTech et assurance de la qualité des métadonnées.
+## HAL, archive nationale ouverte
 
 **Description de HAL **: Archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.
 
-**Utilisation d'API **: Extraction et analyse des données via des outils comme RStudio.
+**Utilisation d'API **: Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ?
+
+**Création d'une cellule HAL**: 2 janvier 2023.
+
+**Objectif** : Intégration de l'archive ouverte HAL dans la communauté de recherche d'AgroParisTech et assurance de la qualité des métadonnées.
+
+
 
 ## {ManagHAL}, package R d'extraction de données bibliométriques HAL et d'analyse de réseaux
 
@@ -48,10 +50,7 @@ Les outils pour réaliser des analyses bibliométriques se répartissent en troi
 Ainsi, durant mes 2 mois et 17 jours de stage au sein de l'unité mixte de recherche Mathématiques et Informatique Appliquées (MIA) - Paris Saclay, associée aux tutelles AgroParisTech, INRAE et Université Paris Saclay, j’ai travaillé sur rendre le package {managHAL} plus accessible et utilisable par d'autres unités de recherches que l'unité MIA - Paris Saclay. J'ai aussi travaillé sur la programmation et l’intégration d’outils d’analyse statistique de réseau au sein du package. Encadré par deux tuteurs, Julie Aubert et Pierre Barbillon, j’ai contribué à la mise en forme du package et à la création de fonctions spécifiques.
 :::
 
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
+Je souhaite parler de managHAL en général, de ce qu'il etait possible de faire avant mon stage via les fonctions du package. et fair ele lien vers les réseaux.
 
 # Méthodes
 
@@ -60,15 +59,10 @@ When you click the **Render** button a document will be generated that includes:
 Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Dans le cadre du package {managHAl}, j'utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l'existence de publications scientifiques co-écrite par les deux noeuds. La taille d'un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d'une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l'analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d'analyse statistique dans de nombreux domaines. Par exemple, des réseaux de régulations de gènes sont réalisés à partir de données de co-expression. Il est possible de donner d'autres exemples comme les analyses de réseaux d'interactions entre des espèces (réseau trophique) réalisées en écologie
 :::
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```{r}
-1 + 1
-```
+Je veux faire une courte présentation des réseaux, et des modèles possible à partir de ces réseaux pour réaliser de l'analyse statistique de réseaux.
 
-## Méthodes informatiques
-
-
+peut etre mettre des exemples de réseaux classiques genre trophique, ... etc
 
 
 ```{r exemple de reseau, tidy.opts=list(width.cutoff=50)}
@@ -81,13 +75,12 @@ unipartite_graph <- plot(unipartite, main = "Réseau Unipartite")
 ```
 
 
-
-
 # Résultats 
 
 ## Accessibilité et généricité de {managHAL}
 
-me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l'ancienne version du apackage, puis des résultats obtenu avec la nouvelle version du package (surtout ne aps mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)
+me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l'ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants... mettre aussi les résultats obtenus avec un sbm. c'est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des diapos des autres partie et les mettre dans les diapos questions.
+
 ::: {.incremental}
 
 - Eat spaghetti
@@ -102,6 +95,10 @@ je veux parler de l'ajout de fonction capable de créer un réseau, puis de l'an
 # Discussion, Perspectives et avenir du package
 
 # Questions
+
+## Méthodes informatiques
+
+ne faire que si j'ai le temps, les mettres dans les diapos de questions possible ?
 
 ## quelles sont les questions qui peuvent venir au cours de ma présentation,
 ## quelles sont les choses dont je n'ai pas parlé au cours de ma présentation,
