@@ -39,7 +39,7 @@
     "href": "presentation.html#accessibilité-et-généricité-de-managhal",
     "title": "Manipulation de données bibliométrique via {managHAL}",
     "section": "Accessibilité et généricité de {managHAL}",
-    "text": "Accessibilité et généricité de {managHAL}\nme permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l’ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants… mettre aussi les résultats obtenus avec un sbm. c’est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des daipos des autres partie et les mettre dans les diapos questions. ::: {.incremental}\n\nEat spaghetti\nDrink wine\n\n:::"
+    "text": "Accessibilité et généricité de {managHAL}\nme permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l’ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants… mettre aussi les résultats obtenus avec un sbm. c’est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des diapos des autres partie et les mettre dans les diapos questions.\n\n\nEat spaghetti\nDrink wine"
   },
   {
     "objectID": "presentation.html#ajout-de-fonctionnalité-à-managhal",
