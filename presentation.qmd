@@ -21,19 +21,15 @@ library(sbm, quietly = TRUE)
 library(tibble, quietly = TRUE)
 ```
 
-
 ::: notes
-
 ## Martin AMIENS {.center}
 
 -   Stagiaire au sein de l'unité MIA - Paris-Saclay.
 -   Etudiant en première année du master Bio-Informatique et Bio-Statistiques à Paris-Saclay.
 -   Tuteurs : Julie AUBERT, Pierre BARBILLON
-
 :::
 
 ## Contexte {.center}
-
 
 -   DRIT : Direction des Recherches et de l'Innovation Technologique
 
@@ -43,19 +39,19 @@ library(tibble, quietly = TRUE)
 
 . . .
 
-:::: {.columns}
+::: columns
 ::: {.column width="30%"}
-
 -   HAL : Hyper Articles en Ligne
-
 :::
+
 ::: {.column width="70%"}
-
 ![Crédit : CCSDForge](img/HAL_logo.png)
-
 :::
-::::
+:::
 
+. . . 
+
+- {ManagHAL} : Package R d'extraction de données bibliométriques de HAL
 
 ::: notes
 Mon stage est financé par la direction des recherches et de l'innovation technologique (DRIT) qui dirige la cellule HAL d'agroParisTech. je l'ai réalisé sous la tutelle de julie AUBERT et Pierre BARBILLON durant 2 mois et 17 jours. Le stage s'est inscrit dans le contexte de la science ouverte (signifie "la diffusion sans entrave des publications et des données de la recherche."), HAL est l'archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001. Elle est la plateforme majeure de réference au sein de la communauté scientifique française actuelle pour la mise en ligne des publicaitons scientifiques. D'ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d'une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,...)
@@ -66,20 +62,19 @@ Mon stage est financé par la direction des recherches et de l'innovation techno
 ## Objectifs du stage {.center}
 
 ::: notes
-au cours de ce stage, j'avais deux objectifs : Rendre le package accesible et générique, c'est à dire utilisable par d'autres que par l'unité MIA - PS. et ajouter des fonctionnalités permettant d'analyser les données récupérer via managHAL.
-
-faire apparaitre les deux objectifs l'un après l'autre.
+au cours de ce stage, j'avais deux objectifs : Rendre le package accesible et générique, c'est à dire utilisable par d'autres que par l'unité MIA - PS. et ajouter des fonctionnalités permettant d'analyser les données bibliométriques récupérées via managHAL.
 :::
 
 -   Accessibilité et généricité de {managHAL}
 
 . . .
 
--   Ajout de fonctionnalité à {managHAL}
+-   Ajout de fonctionnalités à {managHAL}
 
 ## Accessibilité et généricité de {managHAL}
-::: {.notes}
-Parler API hal, de son fonctionnement, etc(inclure le site API HAL)
+
+::: notes
+Parler API hal, de son fonctionnement,
 :::
 
 <center>
@@ -92,9 +87,13 @@ Parler API hal, de son fonctionnement, etc(inclure le site API HAL)
 
 ## Accessibilité et généricité de {managHAL}
 
-faire un tibble des resultats obtenus avec quelques fonctions présentes dans le package (parler vite fait de pourquoi c'est générique (identifiant structure))
+(parler vite fait de pourquoi c'est générique (identifiant structure))
 
 ::: notes
+
+L'exécution des fonctions est réalisée par le biais d'un exemple. Cet exemple est basé sur des données de l'UMR MIA-Paris-Saclay. Il est important de noter que mon stage se terminant le 26 juillet, Le package est encore en développement. Certaines fonctionnalités sont encore en travail. Les fonctions présentées fonctionnent dans le cadre de l'exemple. Si vous souhaitez exécuter les scripts, il est nécessaire d'avoir accès au package {managHAL}.
+
+Ainsi avec les anciennes fonctions du packages réadaptés, il est possible de charger un data.frame à partir d'une table fournie par la RH, il est aussi possible d'obtenir un data.frame contenant les données bibliométriques d'un identifaints de laboratoire. Ce qui n'etait pas le cas auparavant et permet plus d'usage pour des laboratoires n'ayant pas acces à tous les identifiants des auteurs.
 me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l'ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants... mettre aussi les résultats obtenus avec un sbm. c'est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des diapos des autres partie et les mettre dans les diapos questions.
 :::
 
@@ -130,20 +129,70 @@ HAL_publis_auteurs[1,]
 
 ## Réseaux et modèle de graphe aléatoire
 
-Expliquer tres brievement un reseau, montrer quelque exemples rapidement, puis fair eun parallèle vers la présentation de louis qui arrive apres. ::: {.notes} Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Dans le cadre du package {managHAl}, j'utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l'existence de publications scientifiques co-écrite par les deux noeuds. La taille d'un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d'une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l'analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d'analyse statistique dans de nombreux domaines. Par exemple, des réseaux de régulations de gènes sont réalisés à partir de données de co-expression. Il est possible de donner d'autres exemples comme les analyses de réseaux d'interactions entre des espèces (réseau trophique) réalisées en écologie :::
+Un réseau est composé de :
 
-Je veux faire une courte présentation des réseaux, et des modèles possible à partir de ces réseaux pour réaliser de l'analyse statistique de réseaux.
+- noeuds (entités)
 
-peut etre mettre des exemples de réseaux classiques genre trophique, ... etc
+- arêtes (interactions entre ces entités)
 
-```{r exemple de reseau, tidy.opts=list(width.cutoff=50)}
-#| echo: true
-#| output-location: slide
+::: panel-tabset
+
+#### Introduction
+
+```{=tex}
+\begin{align*}
+Y_{ij} \neq 0 & \quad \text{si un lien existe entre les nœuds } i \text{ et } j, \\
+Y_{ij} = 0 & \quad \text{si aucun lien n'existe entre les nœuds } i \text{ et } j.
+\end{align*}
+```
+
+#### Réseau Unipartite
+
+```{r}
+#| code-fold: true
 # Création d'un réseau unipartite
 set.seed(42) # Pour la reproductibilité 
 unipartite <- erdos.renyi.game(10, 0.3)
 unipartite_graph <- plot(unipartite, main = "Réseau Unipartite")
+
 ```
+
+#### Réseau Bipartite
+
+```{r}
+#| code-fold: true
+# Création d'un réseau bipartite Noms des nœuds
+nodes_A <- c("A1", "A2", "A3")
+nodes_B <- c("B1", "B2", "B3", "B4")
+# Liste des arêtes
+edges <- c("A1", "B1", "A1", "B2", "A2", "B1", "A2",
+    "B2", "A2", "B3", "A3", "B2", "A3", "B4")
+# Création du graphe
+bipartite <- graph(edges, directed = FALSE)
+V(bipartite)$type <- bipartite_mapping(bipartite)$type
+plot(bipartite, layout = layout_as_bipartite, vertex.color = c("skyblue",
+    "salmon")[V(bipartite)$type + 1], vertex.label.color = "black",
+    vertex.shape = "circle", vertex.size = 30, edge.width = 2,
+    main = "Réseau Bipartite")
+```
+
+#### Exemple
+
+::: {.r-stack}
+![Exemple de Réseau trophique, Crédit : (Kéfi et al. 2016)](img/reseau_trophique.png){.fragment width="300" height="300"}
+
+![RAD51 et son réseau d'interaction de sa famille de gènes, Crédits : (Li et al., 2021)](img/Reseau_interaction_genes.png){.fragment width="300" height="300"}
+
+![réseau autre](image3.png){.fragment width="400" height="400"}
+:::
+
+:::
+
+::: {.notes}
+Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Il existe différent types de réseaux : les réseaux unipartites composés uniquement d'un type de neouds, les réseaux bipartites composés de deux types de noeuds et bien sur d'autres types dont je ne parlerais pas aujourd'hui. Dans le cadre du package {managHAl}, j'utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l'existence de publications scientifiques co-écrite par les deux noeuds. La taille d'un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d'une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l'analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d'analyse statistique dans de nombreux domaines. Par exemple, des réseaux écologiques peuvent être réalisé, ici un réseau trophique tiré de la publication de ... ou encore un réseau de genes (tiré de la publication de ...). Je n'en dirais pas plus sur le sujet il me semble que louis lacoste qui présente aujourd'hui aussi discutera de réseau écologique et donc aura tout le loisir de répondre à vos questions sur le sujet.
+
+
+:::
 
 ## Ajout de fonctionnalité à {managHAL}
 
