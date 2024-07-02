@@ -8,6 +8,7 @@ tutors:
   - name: "Julie AUBERT"
   - name: "Pierre BARBILLON"
 ---
+
 ```{r, include=FALSE, echo = FALSE, warning = FALSE, message=FALSE}
 library(igraph, quietly = TRUE)
 library(tidyr, quietly = TRUE)
@@ -19,73 +20,84 @@ library(visNetwork, quietly = TRUE)
 library(sbm, quietly = TRUE)
 ```
 
-## Martin AMIENS
 
+::: notes
 
-- Stagiaire au sein de l'unité MIA - Paris-Saclay. 
-- Etudiant en première année du master Bio-Informatique et Bio-Statistiques.
-- Tuteurs : Julie AUBERT, Pierre BARBILLON
+## Martin AMIENS {.center}
 
-
-
-
-::: {.notes}
-
-Bonjour à toutes et à tous, "comme l'a dit julien, je suis martin AMIENS, stagiaire au sein de l'unité MIA (mathématiques et Informatiques appliqués) de paris saclay. 
+-   Stagiaire au sein de l'unité MIA - Paris-Saclay.
+-   Etudiant en première année du master Bio-Informatique et Bio-Statistiques à Paris-Saclay.
+-   Tuteurs : Julie AUBERT, Pierre BARBILLON
 
 :::
 
-## Contexte
+## Contexte {.center}
 
-::: {.incremental}
-- DRIT : Direction des Recherches et de l'Innovation Technologique
-- Sciences Ouvertes : "est la diffusion sans entrave des publications et des données de la recherche." (Webmestre, 2021)
-- HAL : Hyper Articles en Ligne (ajouter un logo de hal ?)
+
+-   DRIT : Direction des Recherches et de l'Innovation Technologique
+
+. . .
+
+-   Sciences Ouvertes : "est la diffusion sans entrave des publications et des données de la recherche." (Webmestre,2021)
+
+. . .
+
+:::: {.columns}
+::: {.column width="30%"}
+
+-   HAL : Hyper Articles en Ligne
+
 :::
-::: {.notes}
+::: {.column width="70%"}
 
-Mon stage est financé par la direction des recherches et de l'innovation technologique (DRIT) qui dirige la cellule HAL d'agroParisTech. je l'ai réalisé sous la tutelle de julie AUBERT et Pierre BARBILLON durant 2 mois et 17 jours. Le stage s'est inscrit dans le contexte de la science ouverte (signifie "la diffusion sans entrave des publications et des données de la recherche."), HAL est l'archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.
- ... bla bla bla, elle est la plateforme majeure, de réference au sein de la communauté scientifique française actuelle. D'ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d'une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,...)
-
-**Utilisation d'API **: Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.
+![Crédit : CCSDForge](img/HAL_logo.png)
 
 :::
+::::
 
+::::
 
-## Objectifs du stage
+::: notes
+Mon stage est financé par la direction des recherches et de l'innovation technologique (DRIT) qui dirige la cellule HAL d'agroParisTech. je l'ai réalisé sous la tutelle de julie AUBERT et Pierre BARBILLON durant 2 mois et 17 jours. Le stage s'est inscrit dans le contexte de la science ouverte (signifie "la diffusion sans entrave des publications et des données de la recherche."), HAL est l'archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001. Elle est la plateforme majeure de réference au sein de la communauté scientifique française actuelle pour la mise en ligne des publicaitons scientifiques. D'ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d'une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,...)
 
-::: {.notes}
+**Utilisation d'API** : Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.
+:::
 
-au cours de ce stage, j'avais deux objectifs : Rendre le package accesible et générique, c'est à  dire utilisable par d'autres que par l'unité MIA - PS.
-et ajouter des fonctionnalités permettant d'analyser les données récupérer via managHAL.
+## Objectifs du stage {.center}
+
+::: notes
+au cours de ce stage, j'avais deux objectifs : Rendre le package accesible et générique, c'est à dire utilisable par d'autres que par l'unité MIA - PS. et ajouter des fonctionnalités permettant d'analyser les données récupérer via managHAL.
 
 faire apparaitre les deux objectifs l'un après l'autre.
-
 :::
 
-Accessibilité et généricité de {managHAL}
+-   Accessibilité et généricité de {managHAL}
 
-Ajout de fonctionnalité à {managHAL}
+. . .
 
+-   Ajout de fonctionnalité à {managHAL}
 
 ## Accessibilité et généricité de {managHAL}
 
 Parler API hal, de son fonctionnement, etc(inclure le site API HAL)
 
+<center>
+
+<iframe src="https://api.archives-ouvertes.fr/docs/search/?schema=field-types#field-types" width="100%" height="650px">
+
+</iframe>
+
+</center>
 
 ## Accessibilité et généricité de {managHAL}
 
 fair un tibble des resultats obtenus avec quelques fonctions présentes dans le package (parler vite fait de pourquoi c'est générique (identifiant structure))
 
-::: {.notes}
-
+::: notes
 me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l'ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants... mettre aussi les résultats obtenus avec un sbm. c'est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des diapos des autres partie et les mettre dans les diapos questions.
-
 :::
 
-::: {.panel-tabset}
-
-
+::: panel-tabset
 ### Tab A
 
 ```{r load-team-table}
@@ -110,22 +122,15 @@ HAL_publis_auteurs <- managHAL::HAL_extract_csv(id = data_RH_csv_Example[,12] , 
 HAL_publis_auteurs[1,]
 
 ```
-
-
 :::
 
 ## Réseaux et modèle de graphe aléatoire
 
-Expliquer tres brievement un reseau, montrer quelque exemples rapidement, puis fair eun parallèle vers la présentation de louis qui arrive apres.
-::: {.notes}
-Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Dans le cadre du package {managHAl}, j'utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l'existence de publications scientifiques co-écrite par les deux noeuds. La taille d'un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d'une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l'analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d'analyse statistique dans de nombreux domaines. Par exemple, des réseaux de régulations de gènes sont réalisés à partir de données de co-expression. Il est possible de donner d'autres exemples comme les analyses de réseaux d'interactions entre des espèces (réseau trophique) réalisées en écologie
-:::
-
+Expliquer tres brievement un reseau, montrer quelque exemples rapidement, puis fair eun parallèle vers la présentation de louis qui arrive apres. ::: {.notes} Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Dans le cadre du package {managHAl}, j'utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l'existence de publications scientifiques co-écrite par les deux noeuds. La taille d'un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d'une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l'analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d'analyse statistique dans de nombreux domaines. Par exemple, des réseaux de régulations de gènes sont réalisés à partir de données de co-expression. Il est possible de donner d'autres exemples comme les analyses de réseaux d'interactions entre des espèces (réseau trophique) réalisées en écologie :::
 
 Je veux faire une courte présentation des réseaux, et des modèles possible à partir de ces réseaux pour réaliser de l'analyse statistique de réseaux.
 
 peut etre mettre des exemples de réseaux classiques genre trophique, ... etc
-
 
 ```{r exemple de reseau, tidy.opts=list(width.cutoff=50)}
 #| echo: true
@@ -135,7 +140,6 @@ set.seed(42) # Pour la reproductibilité
 unipartite <- erdos.renyi.game(10, 0.3)
 unipartite_graph <- plot(unipartite, main = "Réseau Unipartite")
 ```
-
 
 ## Ajout de fonctionnalité à {managHAL}
 
@@ -155,13 +159,12 @@ Questions ?
 
 ## Méthodes informatiques
 
-ne faire que si j'ai le temps, les mettres dans les diapos de questions possible ?
-parler version Rstudio, package utilisés, explication de ...  
+ne faire que si j'ai le temps, les mettres dans les diapos de questions possible ? parler version Rstudio, package utilisés, explication de ...
 
 ## quelles sont les questions qui peuvent venir au cours de ma présentation,
+
 ## quelles sont les choses dont je n'ai pas parlé au cours de ma présentation,
-## sources 
+
+## sources
 
 <https://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/>
-
-
