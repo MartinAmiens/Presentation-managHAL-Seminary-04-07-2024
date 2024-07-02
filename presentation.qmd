@@ -40,11 +40,11 @@ library(tibble, quietly = TRUE)
 . . .
 
 ::: columns
-::: {.column width="30%"}
+::: {.column width="40%"}
 -   HAL : Hyper Articles en Ligne
 :::
 
-::: {.column width="70%"}
+::: {.column width="60%"}
 ![Crédit : CCSDForge](img/HAL_logo.png)
 :::
 :::
@@ -120,10 +120,9 @@ HAL_publis_Labo <- as_tibble(HAL_publis_Labo)
 HAL_publis_Labo[1,]
 
 # Publications à partir d'ids auteurs
-HAL_publis_auteurs <- managHAL::HAL_extract_csv(id = data_RH_csv_Example[,12] , date_min,date_max, type_id = "person_id")
+HAL_publis_auteurs <- managHAL::HAL_extract_csv(id = data_RH_csv_Example[,12][2,] , date_min,date_max, type_id = "person_id")
 HAL_publis_auteurs <- as_tibble(HAL_publis_auteurs)
-HAL_publis_auteurs[1,]
-
+HAL_publis_auteurs
 ```
 :::
 
@@ -176,14 +175,17 @@ plot(bipartite, layout = layout_as_bipartite, vertex.color = c("skyblue",
     main = "Réseau Bipartite")
 ```
 
-#### Exemple
+#### Exemples
+
+A : Exemple de Réseau trophique, Crédit : (Kéfi et al. 2016)
+
+B : RAD51 et son réseau d'interaction de sa famille de gènes, Crédits : (Li et al., 2021)
 
 ::: {.r-stack}
-![Exemple de Réseau trophique, Crédit : (Kéfi et al. 2016)](img/reseau_trophique.png){.fragment width="300" height="300"}
+![](img/reseau_trophique.png){.fragment width="300" height="300"}
 
-![RAD51 et son réseau d'interaction de sa famille de gènes, Crédits : (Li et al., 2021)](img/Reseau_interaction_genes.png){.fragment width="300" height="300"}
+![](img/Reseau_interaction_genes.png){.fragment width="300" height="300"}
 
-![réseau autre](image3.png){.fragment width="400" height="400"}
 :::
 
 :::
@@ -196,9 +198,15 @@ Un réseau d’interaction est constitué de nœuds (les entités) et d’arête
 
 ## Ajout de fonctionnalité à {managHAL}
 
-montrer la construction d'un réseau à partir des données (mettre l'interactif, le grand et le petit l'un après l'autre)
+### construction d'un réseau de co-auteur
+
+<iframe src="img/Full_Network_Co-authors_Example_managHAL.html" width="100%" height="300px"> </iframe>
+
+
 
 ## Ajout de fonctionnalité à {managHAL}
+
+### Modélisation en blocs stochastiques
 
 dire qu'il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm.
 
