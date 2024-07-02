@@ -1,6 +1,12 @@
 ---
 title: "Manipulation de données bibliométrique via {managHAL}"
-author: "Martin AMIENS"
+author: 
+  - name: "Martin AMIENS"
+    affiliation: "MIA - Paris-Saclay"
+date: "04-07-2024"
+tutors:
+  - name: "Julie AUBERT"
+  - name: "Pierre BARBILLON"
 ---
 ```{r, include=FALSE, echo = FALSE, warning = FALSE, message=FALSE}
 library(igraph, quietly = TRUE)
@@ -13,21 +19,32 @@ library(visNetwork, quietly = TRUE)
 library(sbm, quietly = TRUE)
 ```
 
-# Introduction
+## Martin AMIENS
 
-Me présenter, stage durée, avec qui (tuteurs, unité,...), financé par, ... , ma formation...
+
+- Stagiaire au sein de l'unité MIA - Paris-Saclay. 
+- Etudiant en première année du master Bio-Informatique et Bio-Statistiques.
+- Tuteurs : Julie AUBERT, Pierre BARBILLON
+
+
+
 
 ::: {.notes}
 
-Bonjour à toutes et à tous, "comme l'a dit julien, je suis martin AMIENS, stagiaire au sein de l'unité MIA (mathématiques et Informatiques appliqués) de paris saclay. Je réalise un stage de 2 mois et 17 jours (je crois) avec comme tuteurs julie AUBERT et pierre BARBILLON.
+Bonjour à toutes et à tous, "comme l'a dit julien, je suis martin AMIENS, stagiaire au sein de l'unité MIA (mathématiques et Informatiques appliqués) de paris saclay. 
 
 :::
 
-## Contexte du stage
+## Contexte
 
+::: {.incremental}
+- DRIT : Direction des Recherches et de l'Innovation Technologique
+- Sciences Ouvertes : "est la diffusion sans entrave des publications et des données de la recherche." (Webmestre, 2021)
+- HAL : Hyper Articles en Ligne (ajouter un logo de hal ?)
+:::
 ::: {.notes}
 
-Mon stage est financé par la direction des recherches et de l'innovation technologique (DRIT) qui dirige la cellule HAL d'agroParisTech. Il s'inscrit dans le contexte de la science ouverte (signifie ...), HAL est l'archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.
+Mon stage est financé par la direction des recherches et de l'innovation technologique (DRIT) qui dirige la cellule HAL d'agroParisTech. je l'ai réalisé sous la tutelle de julie AUBERT et Pierre BARBILLON durant 2 mois et 17 jours. Le stage s'est inscrit dans le contexte de la science ouverte (signifie "la diffusion sans entrave des publications et des données de la recherche."), HAL est l'archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.
  ... bla bla bla, elle est la plateforme majeure, de réference au sein de la communauté scientifique française actuelle. D'ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d'une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,...)
 
 **Utilisation d'API **: Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.
@@ -143,3 +160,8 @@ parler version Rstudio, package utilisés, explication de ...
 
 ## quelles sont les questions qui peuvent venir au cours de ma présentation,
 ## quelles sont les choses dont je n'ai pas parlé au cours de ma présentation,
+## sources 
+
+<https://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/>
+
+

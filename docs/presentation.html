@@ -444,6 +444,7 @@
   <meta name="generator" content="quarto-1.4.553">
 
   <meta name="author" content="Martin AMIENS">
+  <meta name="dcterms.date" content="2024-04-07">
   <title>ManagHAL - Manipulation de données bibliométrique via {managHAL}</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -1215,16 +1216,23 @@ margin-right: 0; }
 <div class="quarto-title-author-name">
 Martin AMIENS 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            MIA - Paris-Saclay
+          </p>
+    </div>
 </div>
 
+  <p class="date">2024-04-07</p>
 </section>
-<section>
-<section id="introduction" class="title-slide slide level1 center">
-<h1>Introduction</h1>
-<p>Me présenter, stage durée, avec qui (tuteurs, unité,…), financé par, … , ma formation…</p>
+<section id="martin-amiens" class="slide level2">
+<h2>Martin AMIENS</h2>
+<ul>
+<li>Stagiaire au sein de l’unité MIA - Paris-Saclay.</li>
+<li>Etudiant en première année du master Bio-Informatique et Bio-Statistiques.</li>
+<li>Tuteurs : Julie AUBERT, Pierre BARBILLON</li>
+</ul>
 <aside class="notes">
-<p>Bonjour à toutes et à tous, “comme l’a dit julien, je suis martin AMIENS, stagiaire au sein de l’unité MIA (mathématiques et Informatiques appliqués) de paris saclay. Je réalise un stage de 2 mois et 17 jours (je crois) avec comme tuteurs julie AUBERT et pierre BARBILLON.</p>
+<p>Bonjour à toutes et à tous, “comme l’a dit julien, je suis martin AMIENS, stagiaire au sein de l’unité MIA (mathématiques et Informatiques appliqués) de paris saclay.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -1237,10 +1245,17 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="contexte-du-stage" class="slide level2">
-<h2>Contexte du stage</h2>
+<section id="contexte" class="slide level2">
+<h2>Contexte</h2>
+<div>
+<ul>
+<li class="fragment">DRIT : Direction des Recherches et de l’Innovation Technologique</li>
+<li class="fragment">Sciences Ouvertes : “est la diffusion sans entrave des publications et des données de la recherche.” (Webmestre, 2021)</li>
+<li class="fragment">HAL : Hyper Articles en Ligne (ajouter un logo de hal ?)</li>
+</ul>
+</div>
 <aside class="notes">
-<p>Mon stage est financé par la direction des recherches et de l’innovation technologique (DRIT) qui dirige la cellule HAL d’agroParisTech. Il s’inscrit dans le contexte de la science ouverte (signifie …), HAL est l’archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001. … bla bla bla, elle est la plateforme majeure, de réference au sein de la communauté scientifique française actuelle. D’ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d’une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,…)</p>
+<p>Mon stage est financé par la direction des recherches et de l’innovation technologique (DRIT) qui dirige la cellule HAL d’agroParisTech. je l’ai réalisé sous la tutelle de julie AUBERT et Pierre BARBILLON durant 2 mois et 17 jours. Le stage s’est inscrit dans le contexte de la science ouverte (signifie “la diffusion sans entrave des publications et des données de la recherche.”), HAL est l’archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001. … bla bla bla, elle est la plateforme majeure, de réference au sein de la communauté scientifique française actuelle. D’ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d’une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,…)</p>
 <p><strong>Utilisation d’API </strong>: Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1336,15 +1351,15 @@ display:block!important;
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    docid      halId_s version_i docType_s
-1 3887218 hal-03887218         1       ART
-                                                                                                                                                                                                                                              citationFull_s
-1 Baptiste Rouger, Isabelle Goldringer, Pierre M Barbillon, Anne Miramon, Abdel Kader Naino Jika, et al.. Sensitivity analysis of a crop metapopulation model. Ecological Modelling, 2023, 475, pp.110174. ⟨10.1016/j.ecolmodel.2022.110174⟩. ⟨hal-03887218⟩
-                                                                  citationRef_s
-1 Ecological Modelling, 2023, 475, pp.110174. ⟨10.1016/j.ecolmodel.2022.110174⟩
+1 4190551 hal-04190551         1       ART
+                                                                                                                                                                                                                                                                                citationFull_s
+1 Emmanuelle Blanc, Jérôme Enjalbert, Timothée Flutre, Pierre Barbillon. Efficient Bayesian automatic calibration of a functional-structural wheat model using an adaptive design and a metamodeling approach. Journal of Experimental Botany, In press, ⟨10.1093/jxb/erad339⟩. ⟨hal-04190551⟩
+                                                    citationRef_s
+1 Journal of Experimental Botany, In press, ⟨10.1093/jxb/erad339⟩
   publicationDate_tdate
 1  2023-01-01T00:00:00Z
-                                                                                                                                                                                                                                                                 authFullNamePersonIDIDHal_fs
-1 Baptiste Rouger_FacetSep_811732_FacetSep_,Isabelle Goldringer_FacetSep_749261_FacetSep_isabelle-goldringer,Pierre Barbillon_FacetSep_16750_FacetSep_pierre-barbillon,Anne Miramon_FacetSep_0_FacetSep_,Abdel Kader Naino Jika_FacetSep_785103_FacetSep_,Mathieu Thomas_FacetSep_0_FacetSep_</code></pre>
+                                                                                                                                                                                         authFullNamePersonIDIDHal_fs
+1 Emmanuelle Blanc_FacetSep_0_FacetSep_,Jérôme Enjalbert_FacetSep_1169771_FacetSep_jerome-enjalbert,Timothée Flutre_FacetSep_11756_FacetSep_timothee-flutre,Pierre Barbillon_FacetSep_16750_FacetSep_pierre-barbillon</code></pre>
 </div>
 </div>
 </div>
@@ -1379,7 +1394,7 @@ display:block!important;
 <section id="ajout-de-fonctionnalité-à-managhal-1" class="slide level2">
 <h2>Ajout de fonctionnalité à {managHAL}</h2>
 <p>dire qu’il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm.</p>
-</section></section>
+</section>
 <section id="discussion-perspectives-et-avenir-du-package" class="title-slide slide level1 center">
 <h1>Discussion, Perspectives et avenir du package</h1>
 <p>parler des limitations vu par rapport aux quatres graphes précédents, comment je peux les régler (analyses sur composantes connexe), parler du développement du package et de ce qui sera disponible, la finalité du stage.</p>
@@ -1399,6 +1414,10 @@ display:block!important;
 </section>
 <section id="quelles-sont-les-choses-dont-je-nai-pas-parlé-au-cours-de-ma-présentation" class="slide level2">
 <h2>quelles sont les choses dont je n’ai pas parlé au cours de ma présentation,</h2>
+</section>
+<section id="sources" class="slide level2">
+<h2>sources</h2>
+<p><a href="https://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/" class="uri">https://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/</a></p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
