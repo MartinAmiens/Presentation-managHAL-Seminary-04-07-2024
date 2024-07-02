@@ -1,0 +1,11 @@
+title: Miaps Presentation Template
+contributes:
+  formats: 
+    revealjs:
+      logo: logo-mia-ps-notext.png
+      footer: |
+        theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html).
+      theme: miaps.scss
+      slide-number: c/t
+      show-slide-number: all
+      preview-links: true
