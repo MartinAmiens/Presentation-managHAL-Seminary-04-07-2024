@@ -35,29 +35,19 @@ Paler en quelques phrases du contexte du stage (science ouverte, finacé par la 
 
 ## Objectifs du stage
 
-
+Accessibilité et généricité de {managHAL}
 
 Ajout de fonctionnalité à {managHAL}
+
 
 ## Accessibilité et généricité de {managHAL}
 
 Parler API hal, de son fonctionnement, etc(inclure le site API HAL)
 
+
 ## Accessibilité et généricité de {managHAL}
 
 fair un tibble des resultats obtenus avec quelques fonctions présentes dans le package (parler vite fait de pourquoi c'est générique (identifiant structure))
-
-## {ManagHAL}, package R d'extraction de données bibliométriques HAL et d'analyse de réseaux
-
-::: {.notes}
-Les outils pour réaliser des analyses bibliométriques se répartissent en trois catégories, "general bibliometric and performance analysis, science mapping analysis, and libraries" <https://revista.profesionaldelainformacion.com/index.php/EPI/article/view/epi.2020.ene.03> ou analyse générale bibliométrique et de performances, analyses par cartographie scientifique et librairies / packages. Le package {managHAL} se trouve dans les troisième et deuxième catégories. Il existe à ce jour d'autres outils d'analyses bibliométriques mais la majorité ne permettent pas de travailler via l'api HAL et se concentrent sur webofscience, scopus, google scholar,... Il existe des outils d’extraction de publications HAL, cependant aucun package R ne permet actuellement d'extraire ces données pour réaliser des analyses statisistiques. Pour répondre à ce besoin, Théodore Vanrengterghem a commencé à développer le package R {managHAL}. Le package permet l’extraction de données HAL et la création de bilans bibliographiques. En cours de développement, ce package ne permet pas actuellement la réalisation d'analyses bibliométriques.
-
-Ainsi, durant mes 2 mois et 17 jours de stage au sein de l'unité mixte de recherche Mathématiques et Informatique Appliquées (MIA) - Paris Saclay, associée aux tutelles AgroParisTech, INRAE et Université Paris Saclay, j’ai travaillé sur rendre le package {managHAL} plus accessible et utilisable par d'autres unités de recherches que l'unité MIA - Paris Saclay. J'ai aussi travaillé sur la programmation et l’intégration d’outils d’analyse statistique de réseau au sein du package. Encadré par deux tuteurs, Julie Aubert et Pierre Barbillon, j’ai contribué à la mise en forme du package et à la création de fonctions spécifiques.
-:::
-
-Je souhaite parler de managHAL en général, de ce qu'il etait possible de faire avant mon stage via les fonctions du package. et faire le lien vers les réseaux.
-
-## Accessibilité et généricité de {managHAL}
 
 ::: {.notes}
 
@@ -97,6 +87,8 @@ HAL_publis_auteurs[1,]
 :::
 
 ## Réseaux et modèle de graphe aléatoire
+
+Expliquer tres brievement un reseau, montrer quelque exemples rapidement, puis fair eun parallèle vers la présentation de louis qui arrive apres.
 ::: {.notes}
 Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Dans le cadre du package {managHAl}, j'utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l'existence de publications scientifiques co-écrite par les deux noeuds. La taille d'un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d'une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l'analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d'analyse statistique dans de nombreux domaines. Par exemple, des réseaux de régulations de gènes sont réalisés à partir de données de co-expression. Il est possible de donner d'autres exemples comme les analyses de réseaux d'interactions entre des espèces (réseau trophique) réalisées en écologie
 :::
@@ -117,18 +109,21 @@ unipartite_graph <- plot(unipartite, main = "Réseau Unipartite")
 ```
 
 
-# Résultats 
+## Ajout de fonctionnalité à {managHAL}
 
+montrer la construction d'un réseau à partir des données (mettre l'interactif, le grand et le petit l'un après l'autre)
 
 ## Ajout de fonctionnalité à {managHAL}
 
-je veux parler de l'ajout de fonction capable de créer un réseau, puis de l'analyser (si il est trop grand analyser les composantes connexes)
+dire qu'il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm.
 
 # Discussion, Perspectives et avenir du package
 
-parler de ce que je veux faire, ajouter au package, de ce qu'il sera possible de réaliser avec le package a la fin de mon stage.
+parler des limitations vu par rapport aux quatres graphes précédents, comment je peux les régler (analyses sur composantes connexe), parler du développement du package et de ce qui sera disponible, la finalité du stage.
 
-# Questions
+# Merci de m'avoir écouté
+
+Questions ?
 
 ## Méthodes informatiques
 

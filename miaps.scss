@@ -1,0 +1,73 @@
+/*-- scss:defaults --*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+$font-family-sans-serif: "Roboto", sans-serif !default;
+$presentation-heading-font: "Roboto", sans-serif !default;
+
+/*-- scss:defaults --*/
+
+$grey-color:          #828282 !default;
+$grey-color-light:    lighten($grey-color, 40%);
+$grey-color-dark:     darken($grey-color, 25%);
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
+
+$miaps-color1:        #7DC142 !default;
+$miaps-color2:        #00AEAA !default;
+$miaps-color-dark:    darken($miaps-color2, 10%);
+$miaps-color-light:   lighten($miaps-color1, 10%);
+$code-bg-color-light: rgba($miaps-color-light, 0.15);
+$code-bg-color-dark:  darken($miaps-color-dark, 25%);
+
+$callout-color: $black-color ;
+$callout-bg-color: $code-bg-color-light !important;
+$callout-border-color: $code-bg-color-dark !important;
+$callout-caption-color: $miaps-color2;
+$callout-border-width: 6px ;
+
+$body-bg: #fff;
+$body-color: #000 ;
+$link-color: $miaps-color1;
+
+// fonts
+$headings-font-weight:  500 !default;
+$h2-font-size: 1.6rem !default;
+$font-family-sans-serif: 'Poppins', sans-serif;
+$ff-title: 'Poppins', sans-serif;
+$ff-main: 'Roboto', sans-serif;
+
+// headings
+$presentation-heading-font: 'Roboto', sans serif !default;
+$presentation-heading-color: $miaps-color-dark !default;
+$presentation-heading-font-weight: 500; 
+$r-heading-margin: 0px 0px 0px 0px ; 
+$presentation-font-size-root: 35px;
+
+$right-arrow: "\2192"; // Unicode character for right arrow
+
+/*-- scss:rules --*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $presentation-heading-font ;
+  font-weight: 500;
+  color: $presentation-heading-color !important;
+}
+
+p {
+  font-size: 95%;
+}
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.callout.callout-style-simple {
+    padding: 0em ;
+    color: $callout-color ;
+    background-color: $callout-bg-color;
+    border-left: solid 4px $callout-border-color 0.3rem;
+    border-right: solid 1px $callout-border-color;
+    border-top: solid 1px $callout-border-color;
+    border-bottom: solid 1px $callout-border-color;
+    display: flex;
+}
