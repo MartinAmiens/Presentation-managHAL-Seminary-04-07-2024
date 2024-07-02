@@ -11,14 +11,21 @@
     "href": "presentation.html#hal-archive-nationale-ouverte",
     "title": "Manipulation de données bibliométrique via {managHAL}",
     "section": "HAL, archive nationale ouverte",
-    "text": "HAL, archive nationale ouverte\nDescription de HAL : Archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.\nUtilisation d’API : Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ?\nCréation d’une cellule HAL: 2 janvier 2023.\nObjectif : Intégration de l’archive ouverte HAL dans la communauté de recherche d’AgroParisTech et assurance de la qualité des métadonnées."
+    "text": "HAL, archive nationale ouverte\nDescription de HAL : Archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.\nUtilisation d’API : Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.\nCréation d’une cellule HAL: 2 janvier 2023. elle ets dirigé par la DRIT.\nObjectif : Intégration de l’archive ouverte HAL dans la communauté de recherche d’AgroParisTech et assurance de la qualité des métadonnées."
   },
   {
     "objectID": "presentation.html#managhal-package-r-dextraction-de-données-bibliométriques-hal-et-danalyse-de-réseaux",
     "href": "presentation.html#managhal-package-r-dextraction-de-données-bibliométriques-hal-et-danalyse-de-réseaux",
     "title": "Manipulation de données bibliométrique via {managHAL}",
     "section": "{ManagHAL}, package R d’extraction de données bibliométriques HAL et d’analyse de réseaux",
-    "text": "{ManagHAL}, package R d’extraction de données bibliométriques HAL et d’analyse de réseaux\n\nLes outils pour réaliser des analyses bibliométriques se répartissent en trois catégories, “general bibliometric and performance analysis, science mapping analysis, and libraries” https://revista.profesionaldelainformacion.com/index.php/EPI/article/view/epi.2020.ene.03 ou analyse générale bibliométrique et de performances, analyses par cartographie scientifique et librairies / packages. Le package {managHAL} se trouve dans les troisième et deuxième catégories. Il existe à ce jour d’autres outils d’analyses bibliométriques mais la majorité ne permettent pas de travailler via l’api HAL et se concentrent sur webofscience, scopus, google scholar,… Il existe des outils d’extraction de publications HAL, cependant aucun package R ne permet actuellement d’extraire ces données pour réaliser des analyses statisistiques. Pour répondre à ce besoin, Théodore Vanrengterghem a commencé à développer le package R {managHAL}. Le package permet l’extraction de données HAL et la création de bilans bibliographiques. En cours de développement, ce package ne permet pas actuellement la réalisation d’analyses bibliométriques.\nAinsi, durant mes 2 mois et 17 jours de stage au sein de l’unité mixte de recherche Mathématiques et Informatique Appliquées (MIA) - Paris Saclay, associée aux tutelles AgroParisTech, INRAE et Université Paris Saclay, j’ai travaillé sur rendre le package {managHAL} plus accessible et utilisable par d’autres unités de recherches que l’unité MIA - Paris Saclay. J’ai aussi travaillé sur la programmation et l’intégration d’outils d’analyse statistique de réseau au sein du package. Encadré par deux tuteurs, Julie Aubert et Pierre Barbillon, j’ai contribué à la mise en forme du package et à la création de fonctions spécifiques.\n\nJe souhaite parler de managHAL en général, de ce qu’il etait possible de faire avant mon stage via les fonctions du package. et fair ele lien vers les réseaux."
+    "text": "{ManagHAL}, package R d’extraction de données bibliométriques HAL et d’analyse de réseaux\n\nLes outils pour réaliser des analyses bibliométriques se répartissent en trois catégories, “general bibliometric and performance analysis, science mapping analysis, and libraries” https://revista.profesionaldelainformacion.com/index.php/EPI/article/view/epi.2020.ene.03 ou analyse générale bibliométrique et de performances, analyses par cartographie scientifique et librairies / packages. Le package {managHAL} se trouve dans les troisième et deuxième catégories. Il existe à ce jour d’autres outils d’analyses bibliométriques mais la majorité ne permettent pas de travailler via l’api HAL et se concentrent sur webofscience, scopus, google scholar,… Il existe des outils d’extraction de publications HAL, cependant aucun package R ne permet actuellement d’extraire ces données pour réaliser des analyses statisistiques. Pour répondre à ce besoin, Théodore Vanrengterghem a commencé à développer le package R {managHAL}. Le package permet l’extraction de données HAL et la création de bilans bibliographiques. En cours de développement, ce package ne permet pas actuellement la réalisation d’analyses bibliométriques.\nAinsi, durant mes 2 mois et 17 jours de stage au sein de l’unité mixte de recherche Mathématiques et Informatique Appliquées (MIA) - Paris Saclay, associée aux tutelles AgroParisTech, INRAE et Université Paris Saclay, j’ai travaillé sur rendre le package {managHAL} plus accessible et utilisable par d’autres unités de recherches que l’unité MIA - Paris Saclay. J’ai aussi travaillé sur la programmation et l’intégration d’outils d’analyse statistique de réseau au sein du package. Encadré par deux tuteurs, Julie Aubert et Pierre Barbillon, j’ai contribué à la mise en forme du package et à la création de fonctions spécifiques.\n\nJe souhaite parler de managHAL en général, de ce qu’il etait possible de faire avant mon stage via les fonctions du package. et faire le lien vers les réseaux."
+  },
+  {
+    "objectID": "presentation.html#accessibilité-et-généricité-de-managhal",
+    "href": "presentation.html#accessibilité-et-généricité-de-managhal",
+    "title": "Manipulation de données bibliométrique via {managHAL}",
+    "section": "Accessibilité et généricité de {managHAL}",
+    "text": "Accessibilité et généricité de {managHAL}\nme permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l’ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants… mettre aussi les résultats obtenus avec un sbm. c’est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des diapos des autres partie et les mettre dans les diapos questions.\n\n\nEat spaghetti\nDrink wine"
   },
   {
     "objectID": "presentation.html#réseaux-et-modèle-de-graphe-aléatoire",
@@ -35,13 +42,6 @@
     "text": "Réseaux et modèle de graphe aléatoire"
   },
   {
-    "objectID": "presentation.html#accessibilité-et-généricité-de-managhal",
-    "href": "presentation.html#accessibilité-et-généricité-de-managhal",
-    "title": "Manipulation de données bibliométrique via {managHAL}",
-    "section": "Accessibilité et généricité de {managHAL}",
-    "text": "Accessibilité et généricité de {managHAL}\nme permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l’ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants… mettre aussi les résultats obtenus avec un sbm. c’est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des diapos des autres partie et les mettre dans les diapos questions.\n\n\nEat spaghetti\nDrink wine"
-  },
-  {
     "objectID": "presentation.html#ajout-de-fonctionnalité-à-managhal",
     "href": "presentation.html#ajout-de-fonctionnalité-à-managhal",
     "title": "Manipulation de données bibliométrique via {managHAL}",
@@ -53,7 +53,7 @@
     "href": "presentation.html#méthodes-informatiques",
     "title": "Manipulation de données bibliométrique via {managHAL}",
     "section": "Méthodes informatiques",
-    "text": "Méthodes informatiques\nne faire que si j’ai le temps, les mettres dans les diapos de questions possible ?"
+    "text": "Méthodes informatiques\nne faire que si j’ai le temps, les mettres dans les diapos de questions possible ? parler version Rstudio, package utilisés, explication de …"
   },
   {
     "objectID": "presentation.html#quelles-sont-les-questions-qui-peuvent-venir-au-cours-de-ma-présentation",
