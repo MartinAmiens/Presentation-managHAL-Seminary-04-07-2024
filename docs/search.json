@@ -4,14 +4,14 @@
     "href": "presentation.html#contexte-du-stage",
     "title": "Manipulation de données bibliométrique via {managHAL}",
     "section": "Contexte du stage",
-    "text": "Contexte du stage\n\nPaler en quelques phrases du contexte du stage (science ouverte, finacé par la drit qui dirige la cellule HAL d’agroparistech, parler de hal, plateforme de ref, fonds non données aux chercheurs si pas toutes les publis sur HAL, et évoquer son api complexe)\nDescription de HAL : Archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.\nUtilisation d’API : Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.\nCréation d’une cellule HAL: 2 janvier 2023. elle est dirigé par la DRIT. (direction de la recherche et de l’innovation technologique)"
+    "text": "Contexte du stage\n\nMon stage est financé par la direction des recherches et de l’innovation technologique (DRIT) qui dirige la cellule HAL d’agroParisTech. Il s’inscrit dans le contexte de la science ouverte (signifie …), HAL est l’archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001. … bla bla bla, elle est la plateforme majeure, de réference au sein de la communauté scientifique française actuelle. D’ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d’une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,…)\nUtilisation d’API : Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats."
   },
   {
     "objectID": "presentation.html#objectifs-du-stage",
     "href": "presentation.html#objectifs-du-stage",
     "title": "Manipulation de données bibliométrique via {managHAL}",
     "section": "Objectifs du stage",
-    "text": "Objectifs du stage\nAccessibilité et généricité de {managHAL}\nAjout de fonctionnalité à {managHAL}"
+    "text": "Objectifs du stage\n\nau cours de ce stage, j’avais deux objectifs : Rendre le package accesible et générique, c’est à dire utilisable par d’autres que par l’unité MIA - PS. et ajouter des fonctionnalités permettant d’analyser les données récupérer via managHAL.\nfaire apparaitre les deux objectifs l’un après l’autre.\n\nAccessibilité et généricité de {managHAL}\nAjout de fonctionnalité à {managHAL}"
   },
   {
     "objectID": "presentation.html#accessibilité-et-généricité-de-managhal",
