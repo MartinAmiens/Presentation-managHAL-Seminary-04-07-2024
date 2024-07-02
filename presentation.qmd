@@ -54,12 +54,40 @@ Je souhaite parler de managHAL en général, de ce qu'il etait possible de faire
 
 ## Accessibilité et généricité de {managHAL}
 
+::: {.notes}
+
 me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l'ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants... mettre aussi les résultats obtenus avec un sbm. c'est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des diapos des autres partie et les mettre dans les diapos questions.
 
-::: {.incremental}
+:::
 
-- Eat spaghetti
-- Drink wine
+::: {.panel-tabset}
+
+
+### Tab A
+
+```{r load-team-table}
+data_RH_csv_Example <- load_team_table(filter_id = TRUE, date_cols = c(6,7), filepath_or_url = "./data/Data_RH_Example.csv")
+# afin de ne garder que les lignes avec un idhal correct
+data_RH_csv_Example <- data_RH_csv_Example[which(!is.na(data_RH_csv_Example$idhal)),]
+head(data_RH_csv_Example)
+```
+
+### Tab B
+
+```{r Hal-extract-csv}
+date_min = "01/01/2022"
+date_max = "01/01/2023"
+
+# Publications à partir d'un id de laboratoire.
+HAL_publis_Labo <- managHAL::HAL_extract_csv(id = 1002311, date_min,date_max, type_id = "struct_id", add_output = c("structAcronym_s","structId_i", "structHasAlphaAuthIdHalPersonid_fs"))
+HAL_publis_Labo[1,]
+
+# Publications à partir d'ids auteurs
+HAL_publis_auteurs <- managHAL::HAL_extract_csv(id = data_RH_csv_Example[,12] , date_min,date_max, type_id = "person_id")
+HAL_publis_auteurs[1,]
+
+```
+
 
 :::
 
