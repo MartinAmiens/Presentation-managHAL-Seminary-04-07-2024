@@ -1,11 +1,22 @@
-title: Miaps Presentation Template
-contributes:
-  formats: 
+title: "MIA Paris-Saclay"
+lang: fr    
+subtitle: "Visite HCERES MathNum"
+date: 04/07/2024
+date-format: long
+footer: <https://mia-ps.inrae.fr>
+logo: logo-mia-ps-notext.png
+contributes: 
+  formats:
     revealjs:
-      logo: logo-mia-ps-notext.png
-      footer: |
-        theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html).
-      theme: miaps.scss
-      slide-number: c/t
-      show-slide-number: all
-      preview-links: true
+      fig_crop: yes
+      self-contained: true
+      navigation-mode: 'vertical'
+      theme: [default, miaps.scss]
+      slide-number: true
+      smaller: true
+      callout-icon: false;
+      title-slide-attributes:
+        data-background-image: logo-mia-ps-notext.png
+        data-background-size: 20%
+        data-background-position: top 30px left    30px
+      preview-links: auto
