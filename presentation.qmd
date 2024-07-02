@@ -17,23 +17,34 @@ library(sbm, quietly = TRUE)
 
 Me présenter, stage durée, avec qui (tuteurs, unité,...), financé par, ... , ma formation...
 
-## Contexte du stage
-
-
 ::: {.notes}
 
-Paler en quelques phrases du contexte du stage (science ouverte, finacé par la drit qui dirige la cellule HAL d'agroparistech, parler de hal, plateforme de ref, fonds non données aux chercheurs si pas toutes les publis sur HAL, et évoquer son api complexe)
-
-**Description de HAL **: Archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.
-
-**Utilisation d'API **: Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.
-
-**Création d'une cellule HAL**: 2 janvier 2023. elle est dirigé par la DRIT. (direction de la recherche et de l'innovation technologique)
-
+Bonjour à toutes et à tous, "comme l'a dit julien, je suis martin AMIENS, stagiaire au sein de l'unité MIA (mathématiques et Informatiques appliqués) de paris saclay. Je réalise un stage de 2 mois et 17 jours (je crois) avec comme tuteurs julie AUBERT et pierre BARBILLON.
 
 :::
 
+## Contexte du stage
+
+::: {.notes}
+
+Mon stage est financé par la direction des recherches et de l'innovation technologique (DRIT) qui dirige la cellule HAL d'agroParisTech. Il s'inscrit dans le contexte de la science ouverte (signifie ...), HAL est l'archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001.
+ ... bla bla bla, elle est la plateforme majeure, de réference au sein de la communauté scientifique française actuelle. D'ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d'une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,...)
+
+**Utilisation d'API **: Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.
+
+:::
+
+
 ## Objectifs du stage
+
+::: {.notes}
+
+au cours de ce stage, j'avais deux objectifs : Rendre le package accesible et générique, c'est à  dire utilisable par d'autres que par l'unité MIA - PS.
+et ajouter des fonctionnalités permettant d'analyser les données récupérer via managHAL.
+
+faire apparaitre les deux objectifs l'un après l'autre.
+
+:::
 
 Accessibilité et généricité de {managHAL}
 
