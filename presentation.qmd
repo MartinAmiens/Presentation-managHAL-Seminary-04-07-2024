@@ -35,10 +35,17 @@ Paler en quelques phrases du contexte du stage (science ouverte, finacé par la 
 
 ## Objectifs du stage
 
-Accessibilité et généricité de {managHAL}
+
 
 Ajout de fonctionnalité à {managHAL}
 
+## Accessibilité et généricité de {managHAL}
+
+Parler API hal, de son fonctionnement, etc(inclure le site API HAL)
+
+## Accessibilité et généricité de {managHAL}
+
+fair un tibble des resultats obtenus avec quelques fonctions présentes dans le package (parler vite fait de pourquoi c'est générique (identifiant structure))
 
 ## {ManagHAL}, package R d'extraction de données bibliométriques HAL et d'analyse de réseaux
 
