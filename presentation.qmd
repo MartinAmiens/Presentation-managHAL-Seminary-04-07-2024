@@ -29,6 +29,15 @@ library(tibble, quietly = TRUE)
 -   Tuteurs : Julie AUBERT, Pierre BARBILLON
 :::
 
+## Plan {.center}
+
+- Contexte du stage
+- Objectifs du stage
+- introduction aux Réseaux
+- Accessibilité et généricité de {managHAL}
+- Ajout de fonctionnalités à {managHAL}
+- Discussion, Perspectives et avenir du package
+
 ## Contexte {.center}
 
 -   DRIT : Direction des Recherches et de l'Innovation Technologique
@@ -126,7 +135,7 @@ HAL_publis_auteurs
 ```
 :::
 
-## Réseaux et modèle de graphe aléatoire
+## Introduction aux Réseaux
 
 Un réseau est composé de :
 
@@ -135,15 +144,6 @@ Un réseau est composé de :
 - arêtes (interactions entre ces entités)
 
 ::: panel-tabset
-
-#### Introduction
-
-```{=tex}
-\begin{align*}
-Y_{ij} \neq 0 & \quad \text{si un lien existe entre les nœuds } i \text{ et } j, \\
-Y_{ij} = 0 & \quad \text{si aucun lien n'existe entre les nœuds } i \text{ et } j.
-\end{align*}
-```
 
 #### Réseau Unipartite
 
