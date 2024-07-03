@@ -44,7 +44,7 @@ library(tibble, quietly = TRUE)
 
 . . .
 
--   Sciences Ouvertes : "est la diffusion sans entrave des publications et des données de la recherche." (Webmestre,2021)
+-   Sciences Ouvertes : sont "la diffusion sans entrave des publications et des données de la recherche." (plan-national-pour-la-science-ouverte,2021)
 
 . . .
 
@@ -200,7 +200,7 @@ Un réseau d’interaction est constitué de nœuds (les entités) et d’arête
 ### construction d'un réseau de co-auteur
 
 ```{=html}
-<script src="Full_Network_Co-authors_Example_managHAL.html"></script>
+<iframe src="Full_Network_Co-authors_Example_managHAL.html"></iframe>
 ```
 ## Ajout de fonctionnalité à {managHAL}
 
@@ -237,7 +237,6 @@ parler des limitations vu par rapport aux quatres graphes précédents, comment 
 
 # Merci de m'avoir écouté
 
-Questions ?
 
 ## Méthodes informatiques
 
