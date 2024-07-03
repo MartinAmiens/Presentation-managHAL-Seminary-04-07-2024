@@ -18,7 +18,7 @@
     "href": "presentation.html#contexte",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Contexte",
-    "text": "Contexte\n\nDRIT : Direction des Recherches et de l’Innovation Technologique\n\n\n\nSciences Ouvertes : “est la diffusion sans entrave des publications et des données de la recherche.” (Webmestre,2021)\n\n\n\n\n\n\nHAL : Hyper Articles en Ligne\n\n\n\n\n\nCrédit : CCSDForge\n\n\n\n\n\n\n\n{ManagHAL} : Package R d’extraction de données bibliométriques de HAL\n\n\nMon stage est financé par la direction des recherches et de l’innovation technologique (DRIT) qui dirige la cellule HAL d’agroParisTech. je l’ai réalisé sous la tutelle de julie AUBERT et Pierre BARBILLON durant 2 mois et 17 jours. Le stage s’est inscrit dans le contexte de la science ouverte (signifie “la diffusion sans entrave des publications et des données de la recherche.”), HAL est l’archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001. Elle est la plateforme majeure de réference au sein de la communauté scientifique française actuelle pour la mise en ligne des publicaitons scientifiques. D’ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d’une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,…)\nUtilisation d’API : Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats."
+    "text": "Contexte\n\nDRIT : Direction des Recherches et de l’Innovation Technologique\n\n\n\nSciences Ouvertes : sont “la diffusion sans entrave des publications et des données de la recherche.” (plan-national-pour-la-science-ouverte,2021)\n\n\n\n\n\n\nHAL : Hyper Articles en Ligne\n\n\n\n\n\nCrédit : CCSDForge\n\n\n\n\n\n\n\n{ManagHAL} : Package R d’extraction de données bibliométriques de HAL\n\n\nMon stage est financé par la direction des recherches et de l’innovation technologique (DRIT) qui dirige la cellule HAL d’agroParisTech. je l’ai réalisé sous la tutelle de julie AUBERT et Pierre BARBILLON durant 2 mois et 17 jours. Le stage s’est inscrit dans le contexte de la science ouverte (signifie “la diffusion sans entrave des publications et des données de la recherche.”), HAL est l’archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001. Elle est la plateforme majeure de réference au sein de la communauté scientifique française actuelle pour la mise en ligne des publicaitons scientifiques. D’ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d’une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,…)\nUtilisation d’API : Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats."
   },
   {
     "objectID": "presentation.html#objectifs-du-stage",
@@ -53,21 +53,14 @@
     "href": "presentation.html#ajout-de-fonctionnalités-à-managhal",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Ajout de fonctionnalités à {managHAL}",
-    "text": "Ajout de fonctionnalités à {managHAL}\nconstruction d’un réseau de co-auteur"
+    "text": "Ajout de fonctionnalités à {managHAL}\nconstruction d’un réseau de co-auteur et SBM\n\n\n\n\n\nRéseau complet de co-auteurs de l’unité MIA - PS\n\n\n\n\n\n\nRéseau complet de co-auteurs de l’unité MIA - PS coloré par appartenance aux groupes"
   },
   {
     "objectID": "presentation.html#ajout-de-fonctionnalité-à-managhal",
     "href": "presentation.html#ajout-de-fonctionnalité-à-managhal",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Ajout de fonctionnalité à {managHAL}",
-    "text": "Ajout de fonctionnalité à {managHAL}\nModélisation en blocs stochastiques\n\n\n\nz"
-  },
-  {
-    "objectID": "presentation.html#ajout-de-fonctionnalité-à-managhal-1",
-    "href": "presentation.html#ajout-de-fonctionnalité-à-managhal-1",
-    "title": "Manipulation de données bibliométriques via {managHAL}",
-    "section": "ajout de fonctionnalité à {managHAL}",
-    "text": "ajout de fonctionnalité à {managHAL}\n\n\n\n\n\n\n\ndire qu’il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm."
+    "text": "Ajout de fonctionnalité à {managHAL}\nCréation de sous-groupe\n\n\n\n\n\nRéseau partiel de co-auteurs de l’unité MIA - PS\n\n\n\n\n\n\nRéseau partiel de co-auteurs de l’unité MIA - PS coloré par appartenance aux groupes\n\n\n\n\n\ndire qu’il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm."
   },
   {
     "objectID": "presentation.html#méthodes-informatiques",
@@ -95,6 +88,6 @@
     "href": "presentation.html#sources",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "sources",
-    "text": "sources\nhttps://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/\n&lt;&gt;\n&lt;&gt;"
+    "text": "sources\nhttps://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/"
   }
 ]
