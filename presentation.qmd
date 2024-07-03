@@ -1,5 +1,5 @@
 ---
-title: "Manipulation de données bibliométrique via {managHAL}"
+title: "Manipulation de données bibliométriques via {managHAL}"
 author: 
   - name: "Martin AMIENS"
     affiliation: "MIA - Paris-Saclay"
@@ -49,11 +49,11 @@ library(tibble, quietly = TRUE)
 . . .
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="50%"}
 -   HAL : Hyper Articles en Ligne
 :::
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![Crédit : CCSDForge](img/HAL_logo.png)
 :::
 :::
@@ -96,9 +96,10 @@ Parler API hal, de son fonctionnement,
 
 ## Accessibilité et généricité de {managHAL}
 
+::: notes
+
 (parler vite fait de pourquoi c'est générique (identifiant structure))
 
-::: notes
 
 L'exécution des fonctions est réalisée par le biais d'un exemple. Cet exemple est basé sur des données de l'UMR MIA-Paris-Saclay. Il est important de noter que mon stage se terminant le 26 juillet, Le package est encore en développement. Certaines fonctionnalités sont encore en travail. Les fonctions présentées fonctionnent dans le cadre de l'exemple. Si vous souhaitez exécuter les scripts, il est nécessaire d'avoir accès au package {managHAL}.
 
@@ -107,9 +108,13 @@ me permet de parler rapidement de ce que je peux obtenir comme résultats de bas
 :::
 
 ::: panel-tabset
-### Tab A
+
+#### Tab A
 
 ```{r load-team-table}
+
+#| code-fold: true
+
 data_RH_csv_Example <- load_team_table(filter_id = TRUE, date_cols = c(6,7), filepath_or_url = "./data/Data_RH_Example.csv")
 # afin de ne garder que les lignes avec un idhal correct
 data_RH_csv_Example <- data_RH_csv_Example[which(!is.na(data_RH_csv_Example$idhal)),]
@@ -117,9 +122,12 @@ data_RH_csv_Example <- as_tibble(data_RH_csv_Example)
 data_RH_csv_Example
 ```
 
-### Tab B
+#### Tab B
 
 ```{r Hal-extract-csv}
+
+#| code-fold: true
+
 date_min = "01/01/2022"
 date_max = "01/01/2023"
 
@@ -196,19 +204,31 @@ Un réseau d’interaction est constitué de nœuds (les entités) et d’arête
 
 :::
 
-## Ajout de fonctionnalité à {managHAL}
+## Ajout de fonctionnalités à {managHAL}
 
 ### construction d'un réseau de co-auteur
 
-<iframe src="img/Full_Network_Co-authors_Example_managHAL.html" width="100%" height="300px"> </iframe>
+<center>
 
+<iframe src="img/Full_Network_Co-authors_Example_managHAL.html" width="100%" height="300px"></iframe>
 
+</center>
 
 ## Ajout de fonctionnalité à {managHAL}
 
 ### Modélisation en blocs stochastiques
 
+<center>
+
+<iframe src="img/Full_Network_Co-authors_Example_managHAL_sbm.html" width="100%" height="300px"></iframe>
+
+</center>
+
+::: {.notes}
+
 dire qu'il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm.
+
+:::
 
 # Discussion, Perspectives et avenir du package
 
