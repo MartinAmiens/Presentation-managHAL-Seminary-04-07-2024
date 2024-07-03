@@ -215,11 +215,12 @@ Un réseau d’interaction est constitué de nœuds (les entités) et d’arête
 
 <object data="Partial_Network_Co-authors_Example_managHAL_sbm.html" width="50%">
 
-</object>
+</object>{.fragment width="300" height="300"}
 
 <object data="Partial_Network_Co-authors_Example_managHAL.html" width="50%">
 
-</object>
+</object>{.fragment width="300" height="300"}
+
 :::
 
 ::: notes
