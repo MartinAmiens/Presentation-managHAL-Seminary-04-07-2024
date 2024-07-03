@@ -226,28 +226,21 @@ Un réseau d’interaction est constitué de nœuds (les entités) et d’arête
 
 ## ajout de fonctionnalité à {managHAL}
 
-<style>
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espace entre les iframes */
-}
-.iframe-wrapper {
-    width: 45%; /* Ajustez cette valeur selon vos besoins */
-}
-iframe {
-    width: 100%;
-    height: 300px;
-}
-</style>
 
 <div class="container">
+
     <div class="iframe-wrapper">
+    
         <iframe src="img/Partial_Network_Co-authors_Example_managHAL_sbm.html"></iframe>
+        
     </div>
+    
     <div class="iframe-wrapper">
+    
         <iframe src="img/Partial_Network_Co-authors_Example_managHAL.html"></iframe>
+        
     </div>
+    
 </div>
 
 ::: {.notes}

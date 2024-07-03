@@ -67,7 +67,7 @@
     "href": "presentation.html#ajout-de-fonctionnalité-à-managhal-1",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "ajout de fonctionnalité à {managHAL}",
-    "text": "ajout de fonctionnalité à {managHAL}\n\n\n&lt;div class=\"iframe-wrapper\"&gt;\n    &lt;iframe src=\"img/Partial_Network_Co-authors_Example_managHAL_sbm.html\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;\n&lt;div class=\"iframe-wrapper\"&gt;\n    &lt;iframe src=\"img/Partial_Network_Co-authors_Example_managHAL.html\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;\n\n\ndire qu’il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm."
+    "text": "ajout de fonctionnalité à {managHAL}\n\n\n&lt;div class=\"iframe-wrapper\"&gt;\n\n    &lt;iframe src=\"img/Partial_Network_Co-authors_Example_managHAL_sbm.html\"&gt;&lt;/iframe&gt;\n    \n&lt;/div&gt;\n\n&lt;div class=\"iframe-wrapper\"&gt;\n\n    &lt;iframe src=\"img/Partial_Network_Co-authors_Example_managHAL.html\"&gt;&lt;/iframe&gt;\n    \n&lt;/div&gt;\n\n\ndire qu’il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm."
   },
   {
     "objectID": "presentation.html#méthodes-informatiques",
