@@ -185,9 +185,9 @@ plot(bipartite, layout = layout_as_bipartite, vertex.color = c("skyblue",
 
 #### Exemples
 
-A : Exemple de Réseau trophique, Crédit : (Kéfi et al. 2016)
+A : Exemple de Réseau trophique (réseau d'interactions des espèces chiliennes), Crédit : (Kéfi et al. 2016)
 
-B : RAD51 et son réseau d'interaction de sa famille de gènes, Crédits : (Li et al., 2021)
+B : RAD51 et son réseau d'interactions de sa famille de gènes, Crédits : (Li et al., 2021)
 
 ::: {.r-stack}
 ![](img/reseau_trophique.png){.fragment width="300" height="300"}
@@ -224,6 +224,32 @@ Un réseau d’interaction est constitué de nœuds (les entités) et d’arête
 
 </center>
 
+## ajout de fonctionnalité à {managHAL}
+
+<style>
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espace entre les iframes */
+}
+.iframe-wrapper {
+    width: 45%; /* Ajustez cette valeur selon vos besoins */
+}
+iframe {
+    width: 100%;
+    height: 300px;
+}
+</style>
+
+<div class="container">
+    <div class="iframe-wrapper">
+        <iframe src="img/Partial_Network_Co-authors_Example_managHAL_sbm.html"></iframe>
+    </div>
+    <div class="iframe-wrapper">
+        <iframe src="img/Partial_Network_Co-authors_Example_managHAL.html"></iframe>
+    </div>
+</div>
+
 ::: {.notes}
 
 dire qu'il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm.
@@ -249,3 +275,8 @@ ne faire que si j'ai le temps, les mettres dans les diapos de questions possible
 ## sources
 
 <https://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/>
+
+<>
+
+<>
+

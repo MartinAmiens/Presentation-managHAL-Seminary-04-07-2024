@@ -46,7 +46,7 @@
     "href": "presentation.html#introduction-aux-réseaux",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Introduction aux Réseaux",
-    "text": "Introduction aux Réseaux\nUn réseau est composé de :\n\nnoeuds (entités)\narêtes (interactions entre ces entités)\n\n\nRéseau UnipartiteRéseau BipartiteExemples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA : Exemple de Réseau trophique, Crédit : (Kéfi et al. 2016)\nB : RAD51 et son réseau d’interaction de sa famille de gènes, Crédits : (Li et al., 2021)\n\n\n\n\n\n\n\n\nUn réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Il existe différent types de réseaux : les réseaux unipartites composés uniquement d’un type de neouds, les réseaux bipartites composés de deux types de noeuds et bien sur d’autres types dont je ne parlerais pas aujourd’hui. Dans le cadre du package {managHAl}, j’utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l’existence de publications scientifiques co-écrite par les deux noeuds. La taille d’un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d’une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l’analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d’analyse statistique dans de nombreux domaines. Par exemple, des réseaux écologiques peuvent être réalisé, ici un réseau trophique tiré de la publication de … ou encore un réseau de genes (tiré de la publication de …). Je n’en dirais pas plus sur le sujet il me semble que louis lacoste qui présente aujourd’hui aussi discutera de réseau écologique et donc aura tout le loisir de répondre à vos questions sur le sujet."
+    "text": "Introduction aux Réseaux\nUn réseau est composé de :\n\nnoeuds (entités)\narêtes (interactions entre ces entités)\n\n\nRéseau UnipartiteRéseau BipartiteExemples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA : Exemple de Réseau trophique (réseau d’interactions des espèces chiliennes), Crédit : (Kéfi et al. 2016)\nB : RAD51 et son réseau d’interactions de sa famille de gènes, Crédits : (Li et al., 2021)\n\n\n\n\n\n\n\n\nUn réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Il existe différent types de réseaux : les réseaux unipartites composés uniquement d’un type de neouds, les réseaux bipartites composés de deux types de noeuds et bien sur d’autres types dont je ne parlerais pas aujourd’hui. Dans le cadre du package {managHAl}, j’utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l’existence de publications scientifiques co-écrite par les deux noeuds. La taille d’un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d’une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l’analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d’analyse statistique dans de nombreux domaines. Par exemple, des réseaux écologiques peuvent être réalisé, ici un réseau trophique tiré de la publication de … ou encore un réseau de genes (tiré de la publication de …). Je n’en dirais pas plus sur le sujet il me semble que louis lacoste qui présente aujourd’hui aussi discutera de réseau écologique et donc aura tout le loisir de répondre à vos questions sur le sujet."
   },
   {
     "objectID": "presentation.html#ajout-de-fonctionnalités-à-managhal",
@@ -60,7 +60,14 @@
     "href": "presentation.html#ajout-de-fonctionnalité-à-managhal",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Ajout de fonctionnalité à {managHAL}",
-    "text": "Ajout de fonctionnalité à {managHAL}\nModélisation en blocs stochastiques\ndire qu’il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm."
+    "text": "Ajout de fonctionnalité à {managHAL}\nModélisation en blocs stochastiques"
+  },
+  {
+    "objectID": "presentation.html#ajout-de-fonctionnalité-à-managhal-1",
+    "href": "presentation.html#ajout-de-fonctionnalité-à-managhal-1",
+    "title": "Manipulation de données bibliométriques via {managHAL}",
+    "section": "ajout de fonctionnalité à {managHAL}",
+    "text": "ajout de fonctionnalité à {managHAL}\n\n\n&lt;div class=\"iframe-wrapper\"&gt;\n    &lt;iframe src=\"img/Partial_Network_Co-authors_Example_managHAL_sbm.html\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;\n&lt;div class=\"iframe-wrapper\"&gt;\n    &lt;iframe src=\"img/Partial_Network_Co-authors_Example_managHAL.html\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;\n\n\ndire qu’il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm."
   },
   {
     "objectID": "presentation.html#méthodes-informatiques",
@@ -88,6 +95,6 @@
     "href": "presentation.html#sources",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "sources",
-    "text": "sources\nhttps://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/"
+    "text": "sources\nhttps://www.ouvrirlascience.fr/plan-national-pour-la-science-ouverte/\n&lt;&gt;\n&lt;&gt;"
   }
 ]
