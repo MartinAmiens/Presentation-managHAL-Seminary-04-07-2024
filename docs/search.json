@@ -11,7 +11,7 @@
     "href": "presentation.html#plan",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Plan",
-    "text": "Plan\n\nContexte du stage\nObjectifs du stage\nintroduction aux Réseaux\nAccessibilité et généricité de {managHAL}\nAjout de fonctionnalités à {managHAL}\nDiscussion, Perspectives et avenir du package"
+    "text": "Plan\n\nContexte du stage\nObjectifs du stage\nAccessibilité et généricité de {managHAL}\nintroduction aux Réseaux\nAjout de fonctionnalités à {managHAL}\nPerspectives et avenir du package"
   },
   {
     "objectID": "presentation.html#contexte",
@@ -32,7 +32,7 @@
     "href": "presentation.html#accessibilité-et-généricité-de-managhal",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Accessibilité et généricité de {managHAL}",
-    "text": "Accessibilité et généricité de {managHAL}\n\nParler API hal, de son fonctionnement,"
+    "text": "Accessibilité et généricité de {managHAL}\n\nParler API hal, de son fonctionnement,\n\n\nExemple d’URL : “https://api.archives-ouvertes.fr/search/hal/?q=structId_i:1002311&fq=publicationDate_tdate:[2022-01-01T00:00:00Z%20TO%202023-01-01T23:59:59Z]&fq=docType_s:(COMM+OR+ART … &sort=producedDate_tdate+desc&fl=docid,halId_s,version_i,docType_s,citationFull_s … &defType=edismax&rows=1000”"
   },
   {
     "objectID": "presentation.html#accessibilité-et-généricité-de-managhal-1",

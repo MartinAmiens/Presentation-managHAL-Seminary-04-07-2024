@@ -33,10 +33,10 @@ library(tibble, quietly = TRUE)
 
 -   Contexte du stage
 -   Objectifs du stage
--   introduction aux Réseaux
 -   Accessibilité et généricité de {managHAL}
+-   introduction aux Réseaux
 -   Ajout de fonctionnalités à {managHAL}
--   Discussion, Perspectives et avenir du package
+-   Perspectives et avenir du package
 
 ## Contexte {.center}
 
@@ -84,6 +84,10 @@ au cours de ce stage, j'avais deux objectifs : Rendre le package accesible et g�
 
 ::: notes
 Parler API hal, de son fonctionnement,
+:::
+
+::: {.smaller}
+**Exemple d'URL** : "https://api.archives-ouvertes.fr/search/hal/?q=structId_i:1002311&fq=publicationDate_tdate:[2022-01-01T00:00:00Z%20TO%202023-01-01T23:59:59Z]&fq=docType_s:(COMM+OR+ART ... &sort=producedDate_tdate+desc&fl=docid,halId_s,version_i,docType_s,citationFull_s ... &defType=edismax&rows=1000"
 :::
 
 <center>
@@ -227,7 +231,7 @@ dire qu'il est possible de réaliser des modèles à partir de ces données (san
 
 :::
 
-# Discussion, Perspectives et avenir du package
+# Perspectives et avenir du package
 
 - Création et optimisation des fonctions permettant la création d'un réseau à partir des données
 
