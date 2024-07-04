@@ -246,13 +246,6 @@ parler des limitations vu par rapport aux quatres graphes précédents, comment 
 
 # Merci de m'avoir écouté
 
-## Méthodes informatiques
-
-ne faire que si j'ai le temps, les mettres dans les diapos de questions possible ? parler version Rstudio, package utilisés, explication de ...
-
-## quelles sont les questions qui peuvent venir au cours de ma présentation,
-
-## quelles sont les choses dont je n'ai pas parlé au cours de ma présentation,
 
 ## sources
 
