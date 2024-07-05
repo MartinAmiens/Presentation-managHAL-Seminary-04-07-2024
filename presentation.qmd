@@ -21,13 +21,13 @@ library(sbm, quietly = TRUE)
 library(tibble, quietly = TRUE)
 ```
 
-::: notes
+
 ## Martin AMIENS {.center}
 
 -   Stagiaire au sein de l'unité MIA - Paris-Saclay.
 -   Etudiant en première année du master Bio-Informatique et Bio-Statistiques à Paris-Saclay.
 -   Tuteurs : Julie AUBERT, Pierre BARBILLON
-:::
+
 
 ## Plan {.center}
 
@@ -62,17 +62,9 @@ library(tibble, quietly = TRUE)
 
 -   {ManagHAL} : Package R d'extraction de données bibliométriques de HAL
 
-::: notes
-Mon stage est financé par la direction des recherches et de l'innovation technologique (DRIT) qui dirige la cellule HAL d'agroParisTech. je l'ai réalisé sous la tutelle de julie AUBERT et Pierre BARBILLON durant 2 mois et 17 jours. Le stage s'est inscrit dans le contexte de la science ouverte (signifie "la diffusion sans entrave des publications et des données de la recherche."), HAL est l'archive nationale pour la diffusion ouverte des résultats de recherche, développée par le CNRS en 2001. Elle est la plateforme majeure de réference au sein de la communauté scientifique française actuelle pour la mise en ligne des publicaitons scientifiques. D'ailleurs les financements ne sont données aux chercheurs que si ces derniers ont mis toutes leurs publications sur la plateforme HAL. Hal dispose d'une api complexe permettant de récuperer les données (dites) bibliométriques associés aux publications. (auteurs, identifiants des auteurs, des strctures,...)
-
-**Utilisation d'API** : Extraction et analyse des données via des outils comme RStudio. décrire peut etre plus en profondeur ? parler des différents champs possible pour récuperer differentes formes de résultats.
-:::
 
 ## Objectifs du stage {.center}
 
-::: notes
-au cours de ce stage, j'avais deux objectifs : Rendre le package accesible et générique, c'est à dire utilisable par d'autres que par l'unité MIA - PS. et ajouter des fonctionnalités permettant d'analyser les données bibliométriques récupérées via managHAL.
-:::
 
 -   Accessibilité et généricité de {managHAL}
 
@@ -82,9 +74,6 @@ au cours de ce stage, j'avais deux objectifs : Rendre le package accesible et g�
 
 ## Accessibilité et généricité de {managHAL}
 
-::: notes
-Parler API hal, de son fonctionnement,
-:::
 
 ::: {.smaller}
 **Exemple d'URL** : "https://api.archives-ouvertes.fr/search/hal/?q=structId_i:1002311&fq=publicationDate_tdate:[2022-01-01T00:00:00Z%20TO%202023-01-01T23:59:59Z]&fq=docType_s:(COMM+OR+ART ... &sort=producedDate_tdate+desc&fl=docid,halId_s,version_i,docType_s,citationFull_s ... &defType=edismax&rows=1000"
@@ -100,13 +89,6 @@ Parler API hal, de son fonctionnement,
 
 ## Accessibilité et généricité de {managHAL}
 
-::: notes
-(parler vite fait de pourquoi c'est générique (identifiant structure))
-
-L'exécution des fonctions est réalisée par le biais d'un exemple. Cet exemple est basé sur des données de l'UMR MIA-Paris-Saclay. Il est important de noter que mon stage se terminant le 26 juillet, Le package est encore en développement. Certaines fonctionnalités sont encore en travail. Les fonctions présentées fonctionnent dans le cadre de l'exemple. Si vous souhaitez exécuter les scripts, il est nécessaire d'avoir accès au package {managHAL}.
-
-Ainsi avec les anciennes fonctions du packages réadaptés, il est possible de charger un data.frame à partir d'une table fournie par la RH, il est aussi possible d'obtenir un data.frame contenant les données bibliométriques d'un identifaints de laboratoire. Ce qui n'etait pas le cas auparavant et permet plus d'usage pour des laboratoires n'ayant pas acces à tous les identifiants des auteurs. me permet de parler rapidement de ce que je peux obtenir comme résultats de base avec l'ancienne version du package, puis des résultats obtenus avec la nouvelle version du package (surtout ne pas mettre de code afin de faire une presentation correcte, facile à suivre, claire et concise)par contre mettre des images des reseaux obtenus meme si pas satisfaisants... mettre aussi les résultats obtenus avec un sbm. c'est la partie qui peut prendre e plus de diapos si pas assez de place alors liberez des diapos des autres partie et les mettre dans les diapos questions.
-:::
 
 ::: panel-tabset
 #### Tab A
@@ -195,10 +177,6 @@ B : RAD51 et son réseau d'interactions de sa famille de gènes, Crédits : (Li 
 :::
 :::
 
-::: notes
-Un réseau d’interaction est constitué de nœuds (les entités) et d’arêtes (les liens entre ces entités). Il existe différent types de réseaux : les réseaux unipartites composés uniquement d'un type de neouds, les réseaux bipartites composés de deux types de noeuds et bien sur d'autres types dont je ne parlerais pas aujourd'hui. Dans le cadre du package {managHAl}, j'utiliserai les réseaux pour modéliser un réseau de co-publications (ou co-auteurs). Les noeuds représenteront des auteurs, et les arêtes entre ces noeuds (auteurs) seront l'existence de publications scientifiques co-écrite par les deux noeuds. La taille d'un nœud représentera le nombre de publications écrites par cet auteur (noeud) et la largeur d'une arête pourra correspondre au nombre de publications co-ecrites par les deux noeuds (co-auteurs). Les réseaux ne sont cependant pas exclusifs à l'analyse de données bibliométriques. En effet, les réseaux sont utilisés comme représentation et comme objet d'analyse statistique dans de nombreux domaines. Par exemple, des réseaux écologiques peuvent être réalisé, ici un réseau trophique tiré de la publication de ... ou encore un réseau de genes (tiré de la publication de ...). Je n'en dirais pas plus sur le sujet il me semble que louis lacoste qui présente aujourd'hui aussi discutera de réseau écologique et donc aura tout le loisir de répondre à vos questions sur le sujet.
-:::
-
 ## Ajout de fonctionnalités à {managHAL}
 
 ### construction d'un réseau de co-auteur et SBM {auto-animate=true}
@@ -225,11 +203,57 @@ Un réseau d’interaction est constitué de nœuds (les entités) et d’arête
 :::
 :::
 
-::: notes
+# Cas d'usage
 
-dire qu'il est possible de réaliser des modèles à partir de ces données (sans expliquer), juste une phrase sur on regroupe les noeuds par profils de connexion similaire. Montrer les deux graphes obtenus avec couleur via sbm.
+## L'unité MIA - Paris-Saclay 1
 
-:::
+```{r chargement de la table RH}
+
+```
+
+
+présenter le chargement de la table RH (comment on fait au niveau utilisateur)
+
+```{r chargement publis a patir de table rh}
+
+```
+
+
+présenter le chargement des publications à partir d'identifiants auteurs.
+
+```{r chargement partir de id structure}
+
+```
+
+présenter le chargement à partir d'un identifiant structure 
+
+## L'unité MIA - Paris-Saclay 2
+
+présenter la création d'un rapport bibliographique
+
+integrer le lien vers html rapport ?  
+
+<center>
+
+<iframe src="lien.html"> </iframe>
+
+</center>
+
+## L'unité MIA - Paris-Saclay 3
+
+présenter les fonctions de nettoyages des données ( + les conclusions que on peut en tirer)
+
+## L'unité MIA - Paris-Saclay 4
+
+présenter la création de réseau
+
+## L'unité MIA - Paris-Saclay 5
+
+présenter le sbm
+
+
+# Questions importantes à poser
+
 
 # Perspectives et avenir du package
 
@@ -237,12 +261,6 @@ dire qu'il est possible de réaliser des modèles à partir de ces données (san
 
 - Création et optimisation des fonctions permettant la création d'un modèle à partir du réseau obtenu
 
-
-::: {.notes}
-
-parler des limitations vu par rapport aux quatres graphes précédents, comment je peux les régler (analyses sur composantes connexe), parler du développement du package et de ce qui sera disponible, la finalité du stage.
-
-:::
 
 # Merci de m'avoir écouté
 
