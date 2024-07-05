@@ -207,22 +207,33 @@ B : RAD51 et son réseau d'interactions de sa famille de gènes, Crédits : (Li 
 
 ## L'unité MIA - Paris-Saclay 1
 
-```{r chargement de la table RH}
+```{r chargement de la table RH depuis un url}
+#| code-fold: true
+
+date_min = "01/01/2022"
+date_max = "01/01/2023"
+
+mia_url <- managHAL:::load_team_table(filter_id = FALSE, date_cols = c(7, 8), "https://seafile.agroparistech.fr/f/cb25bc4e071d43ffb5fb/?dl=1")
 
 ```
 
+```{r show-mia, echo=FALSE, results='asis'}
+knitr::kable(head(mia_url)[,1:6])
+```
 
 présenter le chargement de la table RH (comment on fait au niveau utilisateur)
 
-```{r chargement publis a patir de table rh}
-
+```{r chargement publis a patir de table rh, eval=FALSE}
+#| code-fold: true
+managHAL::HAL_extract_csv()
 ```
 
 
 présenter le chargement des publications à partir d'identifiants auteurs.
 
-```{r chargement partir de id structure}
-
+```{r chargement partir de id structure, eval=FALSE}
+#| code-fold: true
+managHAL::HAL_extract_csv()
 ```
 
 présenter le chargement à partir d'un identifiant structure 
@@ -230,6 +241,11 @@ présenter le chargement à partir d'un identifiant structure
 ## L'unité MIA - Paris-Saclay 2
 
 présenter la création d'un rapport bibliographique
+
+```{r creation rapport bibliographique, eval=FALSE}
+#| code-fold: true
+managHAL::HAL_build_report()
+```
 
 integrer le lien vers html rapport ?  
 
@@ -243,16 +259,39 @@ integrer le lien vers html rapport ?
 
 présenter les fonctions de nettoyages des données ( + les conclusions que on peut en tirer)
 
+```{r fonction de nettoyage de donnees, eval=FALSE}
+#| code-fold: true
+managHAL::find_inconsistent_ids()
+
+managHAL::find_inconsistent_names_ids()
+
+```
+
+
 ## L'unité MIA - Paris-Saclay 4
 
 présenter la création de réseau
 
+```{r création de réseau, eval=FALSE}
+
+```
+
+
 ## L'unité MIA - Paris-Saclay 5
+
 
 présenter le sbm
 
+```{r creation d un sous reseau , eval=FALSE}
+
+```
+
 
 # Questions importantes à poser
+
+- ids à garder ?
+
+- detections des publis non mises en ligne ? 
 
 
 # Perspectives et avenir du package
