@@ -18,7 +18,7 @@
     "href": "presentation.html#contexte",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Contexte",
-    "text": "Contexte\n\nDRIT : Direction des Recherches et de l’Innovation Technologique\n\n\n\nSciences Ouvertes : sont “la diffusion sans entrave des publications et des données de la recherche.” (plan-national-pour-la-science-ouverte,2021)\n\n\n\n\n\n\nHAL : Hyper Articles en Ligne\n\n\n\n\n\nCrédit : CCSDForge\n\n\n\n\n\n\n\n{ManagHAL} : Package R d’extraction de données bibliométriques de HAL"
+    "text": "Contexte\n\nDRITT : Direction de la recherche, de l’innovation et du transfert technologique\n\n\n\nSciences Ouvertes : sont “la diffusion sans entrave des publications et des données de la recherche.” (plan-national-pour-la-science-ouverte,2021)\n\n\n\n\n\n\nHAL : Hyper Articles en Ligne\n\n\n\n\n\nCrédit : CCSDForge\n\n\n\n\n\n\n\n{ManagHAL} : Package R d’extraction de données bibliométriques de HAL"
   },
   {
     "objectID": "presentation.html#objectifs-du-stage",
@@ -39,14 +39,14 @@
     "href": "presentation.html#accessibilité-et-généricité-de-managhal-1",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Accessibilité et généricité de {managHAL}",
-    "text": "Accessibilité et généricité de {managHAL}\n\nTab ATab B\n\n\n\n\n# A tibble: 3 × 13\n  civilite nom       prenom statut rattachement  debut_contrat fin_contrat\n  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;      \n1 M.       ADJAKOSSA Éric   CEC    AgroParisTech \"\"            \"\"         \n2 Mme      AUBERT    Julie  IR     INRAE         \"\"            \"\"         \n3 M.       BARBILLON Pierre PR     AgroParisTech \"\"            \"\"         \n# ℹ 6 more variables: financement &lt;chr&gt;, equipe &lt;chr&gt;, unite &lt;chr&gt;,\n#   orcid &lt;chr&gt;, idhal &lt;dbl&gt;, adresse_mail &lt;chr&gt;\n\n\n\n\n\n\n# A tibble: 1 × 11\n    docid halId_s      version_i docType_s citationFull_s          citationRef_s\n    &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;                   &lt;chr&gt;        \n1 4440523 hal-04440523         1 COMM      Isabelle Lebert, Maxim… Colloque fin…\n# ℹ 5 more variables: publicationDate_tdate &lt;chr&gt;,\n#   authFullNamePersonIDIDHal_fs &lt;chr&gt;, structAcronym_s &lt;chr&gt;,\n#   structId_i &lt;chr&gt;, structHasAlphaAuthIdHalPersonid_fs &lt;chr&gt;\n\n\n# A tibble: 4 × 8\n    docid halId_s      version_i docType_s citationFull_s          citationRef_s\n    &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;                   &lt;chr&gt;        \n1 3781287 hal-03781287         1 COMM      Wenfan Cao, Maxime Lec… FOODMICRO 20…\n2 3694338 hal-03694338         1 COMM      Wenfan Cao, Maxime Lec… 23ème éditio…\n3 3811607 hal-03811607         1 COUV      Julie J. Aubert, Pierr… Statistical …\n4 4019111 hal-03604836         1 ART       Sana Romdhane, Aymé Sp… The Internat…\n# ℹ 2 more variables: publicationDate_tdate &lt;chr&gt;,\n#   authFullNamePersonIDIDHal_fs &lt;chr&gt;"
+    "text": "Accessibilité et généricité de {managHAL}\n\nTab ATab B\n\n\n\n\nCode\n#| code-fold: true\n\ndata_RH_csv_Example &lt;- load_team_table(filter_id = TRUE, date_cols = c(6,7), filepath_or_url = \"./data/Data_RH_Example.csv\")\n# afin de ne garder que les lignes avec un idhal correct\ndata_RH_csv_Example &lt;- data_RH_csv_Example[which(!is.na(data_RH_csv_Example$idhal)),]\ndata_RH_csv_Example &lt;- as_tibble(data_RH_csv_Example)\ndata_RH_csv_Example\n\n\n# A tibble: 3 × 13\n  civilite nom       prenom statut rattachement  debut_contrat fin_contrat\n  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;      \n1 M.       ADJAKOSSA Éric   CEC    AgroParisTech \"\"            \"\"         \n2 Mme      AUBERT    Julie  IR     INRAE         \"\"            \"\"         \n3 M.       BARBILLON Pierre PR     AgroParisTech \"\"            \"\"         \n# ℹ 6 more variables: financement &lt;chr&gt;, equipe &lt;chr&gt;, unite &lt;chr&gt;,\n#   orcid &lt;chr&gt;, idhal &lt;dbl&gt;, adresse_mail &lt;chr&gt;\n\n\n\n\n\n\nCode\n#| code-fold: true\n\ndate_min = \"01/01/2022\"\ndate_max = \"01/01/2023\"\n\n# Publications à partir d'un id de laboratoire.\nHAL_publis_Labo &lt;- managHAL::HAL_extract_csv(id = 1002311, date_min,date_max, type_id = \"struct_id\", add_output = c(\"structAcronym_s\",\"structId_i\", \"structHasAlphaAuthIdHalPersonid_fs\"))\nHAL_publis_Labo &lt;- as_tibble(HAL_publis_Labo)\nHAL_publis_Labo[1,]\n\n\n# A tibble: 1 × 11\n    docid halId_s      version_i docType_s citationFull_s          citationRef_s\n    &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;                   &lt;chr&gt;        \n1 4440523 hal-04440523         1 COMM      Isabelle Lebert, Maxim… Colloque fin…\n# ℹ 5 more variables: publicationDate_tdate &lt;chr&gt;,\n#   authFullNamePersonIDIDHal_fs &lt;chr&gt;, structAcronym_s &lt;chr&gt;,\n#   structId_i &lt;chr&gt;, structHasAlphaAuthIdHalPersonid_fs &lt;chr&gt;\n\n\nCode\n# Publications à partir d'ids auteurs\nHAL_publis_auteurs &lt;- managHAL::HAL_extract_csv(id = data_RH_csv_Example[,12][2,] , date_min,date_max, type_id = \"person_id\")\nHAL_publis_auteurs &lt;- as_tibble(HAL_publis_auteurs)\nHAL_publis_auteurs\n\n\n# A tibble: 4 × 8\n    docid halId_s      version_i docType_s citationFull_s          citationRef_s\n    &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;                   &lt;chr&gt;        \n1 3781287 hal-03781287         1 COMM      Wenfan Cao, Maxime Lec… FOODMICRO 20…\n2 3694338 hal-03694338         1 COMM      Wenfan Cao, Maxime Lec… 23ème éditio…\n3 3811607 hal-03811607         1 COUV      Julie J. Aubert, Pierr… Statistical …\n4 4019111 hal-03604836         1 ART       Sana Romdhane, Aymé Sp… The Internat…\n# ℹ 2 more variables: publicationDate_tdate &lt;chr&gt;,\n#   authFullNamePersonIDIDHal_fs &lt;chr&gt;"
   },
   {
     "objectID": "presentation.html#introduction-aux-réseaux",
     "href": "presentation.html#introduction-aux-réseaux",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Introduction aux Réseaux",
-    "text": "Introduction aux Réseaux\nUn réseau est composé de :\n\nnoeuds (entités)\narêtes (interactions entre ces entités)\n\n\nRéseau UnipartiteRéseau BipartiteExemples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA : Exemple de Réseau trophique (réseau d’interactions des espèces chiliennes), Crédit : (Kéfi et al. 2016)\nB : RAD51 et son réseau d’interactions de sa famille de gènes, Crédits : (Li et al., 2021)"
+    "text": "Introduction aux Réseaux\nUn réseau est composé de :\n\nnoeuds (entités)\narêtes (interactions entre ces entités)\n\n\nRéseau UnipartiteRéseau BipartiteExemples\n\n\n\n\nCode\n# Création d'un réseau unipartite\nset.seed(42) # Pour la reproductibilité \nunipartite &lt;- erdos.renyi.game(10, 0.3)\nunipartite_graph &lt;- plot(unipartite, main = \"Réseau Unipartite\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Création d'un réseau bipartite Noms des nœuds\nnodes_A &lt;- c(\"A1\", \"A2\", \"A3\")\nnodes_B &lt;- c(\"B1\", \"B2\", \"B3\", \"B4\")\n# Liste des arêtes\nedges &lt;- c(\"A1\", \"B1\", \"A1\", \"B2\", \"A2\", \"B1\", \"A2\",\n    \"B2\", \"A2\", \"B3\", \"A3\", \"B2\", \"A3\", \"B4\")\n# Création du graphe\nbipartite &lt;- graph(edges, directed = FALSE)\nV(bipartite)$type &lt;- bipartite_mapping(bipartite)$type\nplot(bipartite, layout = layout_as_bipartite, vertex.color = c(\"skyblue\",\n    \"salmon\")[V(bipartite)$type + 1], vertex.label.color = \"black\",\n    vertex.shape = \"circle\", vertex.size = 30, edge.width = 2,\n    main = \"Réseau Bipartite\")\n\n\n\n\n\n\n\n\n\n\n\nA : Exemple de Réseau trophique (réseau d’interactions des espèces chiliennes), Crédit : (Kéfi et al. 2016)\nB : RAD51 et son réseau d’interactions de sa famille de gènes, Crédits : (Li et al., 2021)"
   },
   {
     "objectID": "presentation.html#ajout-de-fonctionnalités-à-managhal",
@@ -67,35 +67,35 @@
     "href": "presentation.html#lunité-mia---paris-saclay-1",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "L’unité MIA - Paris-Saclay 1",
-    "text": "L’unité MIA - Paris-Saclay 1\n\n\n\n\n\n\n\n\n\n\n\ninformation_regarding_the_contract_date\ncivilite\nnom\nprenom\nstatut\nrattachement\n\n\n\n\n193653S\nM.\nADJAKOSSA\nÉric\nCEC\nAgroParisTech\n\n\n17504B\nMme\nALBERT\nIsabelle\nCR\nINRAE\n\n\nN/A\nM.\nALLYNDREE\nJoseph\nDoctorat\nAgroParisTech\n\n\n188167H\nMme\nALVAREZ\nIsabelle\nIPEF\nINRAE\n\n\n199531G\nM.\nANAKOK\nEmré\nDoctorat\nINRAE\n\n\n20245F\nMme\nAUBERT\nJulie\nIR\nINRAE\n\n\n\nprésenter le chargement de la table RH (comment on fait au niveau utilisateur)\nprésenter le chargement des publications à partir d’identifiants auteurs.\nprésenter le chargement à partir d’un identifiant structure"
+    "text": "L’unité MIA - Paris-Saclay 1\n\n\nCode\n#| code-fold: true\n#| \n\ndate_min = \"01/01/2022\"\ndate_max = \"01/01/2023\"\n\nmia_url &lt;- managHAL:::load_team_table(filter_id = FALSE, date_cols = c(7, 8), \"https://seafile.agroparistech.fr/f/cb25bc4e071d43ffb5fb/?dl=1\")\n\ncleaned_mia &lt;- mia_url %&gt;% \n  dplyr::filter(!is.na(idhal) & as.numeric(idhal)==idhal) %&gt;% # on retire les faux idHal et les NA\n  # puis filtre sur les dates \n  dplyr::mutate(debut_periode = managHAL:::borne_date(debut_contrat,\n                                                     date_min,\"max\"),\n                fin_periode = managHAL:::borne_date(fin_contrat,\n                                                   date_max,\"min\"))\n\n\n\n\n\n\n\n\n\n\n\n\n\ninformation_regarding_the_contract_date\ncivilite\nnom\nprenom\nstatut\nrattachement\n\n\n\n\n193653S\nM.\nADJAKOSSA\nÉric\nCEC\nAgroParisTech\n\n\n17504B\nMme\nALBERT\nIsabelle\nCR\nINRAE\n\n\nN/A\nM.\nALLYNDREE\nJoseph\nDoctorat\nAgroParisTech\n\n\n188167H\nMme\nALVAREZ\nIsabelle\nIPEF\nINRAE\n\n\n199531G\nM.\nANAKOK\nEmré\nDoctorat\nINRAE\n\n\n20245F\nMme\nAUBERT\nJulie\nIR\nINRAE\n\n\n\n\n\nCode\nmanagHAL::HAL_extract_csv()\n\n\n\n\nCode\nmanagHAL::HAL_extract_csv()"
   },
   {
     "objectID": "presentation.html#lunité-mia---paris-saclay-2",
     "href": "presentation.html#lunité-mia---paris-saclay-2",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "L’unité MIA - Paris-Saclay 2",
-    "text": "L’unité MIA - Paris-Saclay 2\nprésenter la création d’un rapport bibliographique\nintegrer le lien vers html rapport ?"
+    "text": "L’unité MIA - Paris-Saclay 2\n\n\nCode\nmanagHAL::HAL_build_report()"
   },
   {
     "objectID": "presentation.html#lunité-mia---paris-saclay-3",
     "href": "presentation.html#lunité-mia---paris-saclay-3",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "L’unité MIA - Paris-Saclay 3",
-    "text": "L’unité MIA - Paris-Saclay 3\nprésenter les fonctions de nettoyages des données ( + les conclusions que on peut en tirer)"
+    "text": "L’unité MIA - Paris-Saclay 3\n\n\nCode\nmanagHAL::find_inconsistent_ids()\n\nmanagHAL::find_inconsistent_names_ids()"
   },
   {
     "objectID": "presentation.html#lunité-mia---paris-saclay-4",
     "href": "presentation.html#lunité-mia---paris-saclay-4",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "L’unité MIA - Paris-Saclay 4",
-    "text": "L’unité MIA - Paris-Saclay 4\nprésenter la création de réseau"
+    "text": "L’unité MIA - Paris-Saclay 4\nVoir Partial_Network_Co-authors_ManagHAL.html"
   },
   {
     "objectID": "presentation.html#lunité-mia---paris-saclay-5",
     "href": "presentation.html#lunité-mia---paris-saclay-5",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "L’unité MIA - Paris-Saclay 5",
-    "text": "L’unité MIA - Paris-Saclay 5\nprésenter le sbm"
+    "text": "L’unité MIA - Paris-Saclay 5"
   },
   {
     "objectID": "presentation.html#sources",

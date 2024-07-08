@@ -40,7 +40,7 @@ library(tibble, quietly = TRUE)
 
 ## Contexte {.center}
 
--   DRIT : Direction des Recherches et de l'Innovation Technologique
+-   DRITT : Direction de la recherche, de l’innovation et du transfert technologique
 
 . . .
 
@@ -205,10 +205,14 @@ B : RAD51 et son réseau d'interactions de sa famille de gènes, Crédits : (Li 
 
 # Cas d'usage
 
+Voir Cas_d_usage_managHAL.R
+
 ## L'unité MIA - Paris-Saclay 1
 
 ```{r chargement de la table RH depuis un url}
+
 #| code-fold: true
+#| 
 
 date_min = "01/01/2022"
 date_max = "01/01/2023"
@@ -229,7 +233,6 @@ cleaned_mia <- mia_url %>%
 knitr::kable(head(mia_url)[,1:6])
 ```
 
-présenter le chargement de la table RH (comment on fait au niveau utilisateur)
 
 ```{r chargement publis a patir de table rh, eval=FALSE}
 #| code-fold: true
@@ -237,38 +240,32 @@ managHAL::HAL_extract_csv()
 ```
 
 
-présenter le chargement des publications à partir d'identifiants auteurs.
-
 ```{r chargement partir de id structure, eval=FALSE}
 #| code-fold: true
 managHAL::HAL_extract_csv()
 ```
 
-présenter le chargement à partir d'un identifiant structure 
 
 ## L'unité MIA - Paris-Saclay 2
 
-présenter la création d'un rapport bibliographique
 
 ```{r creation rapport bibliographique, eval=FALSE}
 #| code-fold: true
 managHAL::HAL_build_report()
 ```
 
-integrer le lien vers html rapport ?  
-
 <center>
 
-<iframe src="lien.html"> </iframe>
+<iframe src="docs/aubert_julie_.html"> </iframe>
 
 </center>
 
 ## L'unité MIA - Paris-Saclay 3
 
-présenter les fonctions de nettoyages des données ( + les conclusions que on peut en tirer)
 
 ```{r fonction de nettoyage de donnees, eval=FALSE}
 #| code-fold: true
+
 managHAL::find_inconsistent_ids()
 
 managHAL::find_inconsistent_names_ids()
@@ -278,31 +275,46 @@ managHAL::find_inconsistent_names_ids()
 
 ## L'unité MIA - Paris-Saclay 4
 
-présenter la création de réseau
+Voir Partial_Network_Co-authors_ManagHAL.html
 
-```{r création de réseau, eval=FALSE}
-
-```
 
 
 ## L'unité MIA - Paris-Saclay 5
 
+<center>
 
-présenter le sbm
+<iframe src="Partial_Network_Co-authors_ManagHAL_sbm.html" width="100%" height="650px"> </iframe>
 
-```{r creation d un sous reseau , eval=FALSE}
+</center>
 
-```
+# Questions
 
+**Contexte :**
 
-# Questions importantes à poser
+Dans les données récupérées, il existe pour un même nom plusieurs formes nominales (une en toute lettre, et une avec les initiales) . Toutes ces formes ne sont pas toujours associées à un identifiant. Lorsque je nettoie mes données, je souhaite donc rajouter un identifiant à une forme nominale sans identifiant s’il en existe un pour une autre forme nominale. 
 
-- ids à garder ?
+**Problème :**
 
-- detections des publis non mises en ligne ? 
+Il arrive qu’il existe deux identifiants pour une même forme nominale (avec les initiales).
+
+**Exemple :**
+
+Première forme nominale : Julie Aubert ; Deuxième forme nominale : J. Aubert
+
+Identifiant : 15356	; Identifiant : 15356  ou  NA
+
+Première forme nominale : Juliette Aubert	; Deuxième forme nominale : J. Aubert
+
+Identifiant : 180399 ; Identifiant :   NA
+
+Première forme nominale : Jule Aubert ; Deuxième forme nominale : J. Aubert
+
+Identifiant : 20987 ; Identifiant : 20987
 
 
 # Perspectives et avenir du package
+
+- Optimisation des fonctions de préparation des données
 
 - Création et optimisation des fonctions permettant la création d'un réseau à partir des données
 
