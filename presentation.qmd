@@ -192,7 +192,7 @@ B : RAD51 et son réseau d'interactions de sa famille de gènes, Crédits : (Li 
 :::
 :::
 
-## Ajout de fonctionnalité à {managHAL}
+## Ajout de fonctionnalités à {managHAL}
 
 ### Création de sous-groupe {auto-animate=true}
 
