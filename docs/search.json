@@ -11,7 +11,7 @@
     "href": "presentation.html#plan",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "Plan",
-    "text": "Plan\n\nContexte du stage\nObjectifs du stage\nAccessibilité et généricité de {managHAL}\nintroduction aux Réseaux\nAjout de fonctionnalités à {managHAL}\nPerspectives et avenir du package"
+    "text": "Plan\n\nContexte du stage\nObjectifs du stage\nAccessibilité et généricité de {managHAL}\nintroduction aux Réseaux\nAjout de fonctionnalités à {managHAL}\nCas d’usage\nQuestions\nPerspectives et avenir du package"
   },
   {
     "objectID": "presentation.html#contexte",
@@ -67,7 +67,7 @@
     "href": "presentation.html#lunité-mia---paris-saclay-1",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "L’unité MIA - Paris-Saclay 1",
-    "text": "L’unité MIA - Paris-Saclay 1\n\n\nCode\n#| code-fold: true\n#| \n\ndate_min = \"01/01/2022\"\ndate_max = \"01/01/2023\"\n\nmia_url &lt;- managHAL:::load_team_table(filter_id = FALSE, date_cols = c(7, 8), \"https://seafile.agroparistech.fr/f/cb25bc4e071d43ffb5fb/?dl=1\")\n\ncleaned_mia &lt;- mia_url %&gt;% \n  dplyr::filter(!is.na(idhal) & as.numeric(idhal)==idhal) %&gt;% # on retire les faux idHal et les NA\n  # puis filtre sur les dates \n  dplyr::mutate(debut_periode = managHAL:::borne_date(debut_contrat,\n                                                     date_min,\"max\"),\n                fin_periode = managHAL:::borne_date(fin_contrat,\n                                                   date_max,\"min\"))\n\n\n\n\n\n\n\n\n\n\n\n\n\ninformation_regarding_the_contract_date\ncivilite\nnom\nprenom\nstatut\nrattachement\n\n\n\n\n193653S\nM.\nADJAKOSSA\nÉric\nCEC\nAgroParisTech\n\n\n17504B\nMme\nALBERT\nIsabelle\nCR\nINRAE\n\n\nN/A\nM.\nALLYNDREE\nJoseph\nDoctorat\nAgroParisTech\n\n\n188167H\nMme\nALVAREZ\nIsabelle\nIPEF\nINRAE\n\n\n199531G\nM.\nANAKOK\nEmré\nDoctorat\nINRAE\n\n\n20245F\nMme\nAUBERT\nJulie\nIR\nINRAE\n\n\n\n\n\nCode\nmanagHAL::HAL_extract_csv()\n\n\n\n\nCode\nmanagHAL::HAL_extract_csv()"
+    "text": "L’unité MIA - Paris-Saclay 1\n\n\nCode\n#| code-fold: true\n#| \n\ndate_min = \"01/01/2022\"\ndate_max = \"01/01/2023\"\n\nmia_url &lt;- managHAL:::load_team_table(filter_id = FALSE, date_cols = c(7, 8), \"https://seafile.agroparistech.fr/f/cb25bc4e071d43ffb5fb/?dl=1\")\n\ncleaned_mia &lt;- mia_url %&gt;% \n  dplyr::filter(!is.na(idhal) & as.numeric(idhal)==idhal) %&gt;% # on retire les faux idHal et les NA\n  # puis filtre sur les dates \n  dplyr::mutate(debut_periode = managHAL:::borne_date(debut_contrat,\n                                                     date_min,\"max\"),\n                fin_periode = managHAL:::borne_date(fin_contrat,\n                                                   date_max,\"min\"))\n\n\n\n\n\n\n\n\n\n\n\n\n\ninformation_regarding_the_contract_date\ncivilite\nnom\nprenom\nstatut\nrattachement\n\n\n\n\n193653S\nM.\nADJAKOSSA\nÉric\nCEC\nAgroParisTech\n\n\n17504B\nMme\nALBERT\nIsabelle\nCR\nINRAE\n\n\nN/A\nM.\nALLYNDREE\nJoseph\nDoctorat\nAgroParisTech\n\n\n188167H\nMme\nALVAREZ\nIsabelle\nIPEF\nINRAE\n\n\n199531G\nM.\nANAKOK\nEmré\nDoctorat\nINRAE\n\n\n20245F\nMme\nAUBERT\nJulie\nIR\nINRAE"
   },
   {
     "objectID": "presentation.html#lunité-mia---paris-saclay-2",
@@ -81,21 +81,7 @@
     "href": "presentation.html#lunité-mia---paris-saclay-3",
     "title": "Manipulation de données bibliométriques via {managHAL}",
     "section": "L’unité MIA - Paris-Saclay 3",
-    "text": "L’unité MIA - Paris-Saclay 3\n\n\nCode\nmanagHAL::find_inconsistent_ids()\n\nmanagHAL::find_inconsistent_names_ids()"
-  },
-  {
-    "objectID": "presentation.html#lunité-mia---paris-saclay-4",
-    "href": "presentation.html#lunité-mia---paris-saclay-4",
-    "title": "Manipulation de données bibliométriques via {managHAL}",
-    "section": "L’unité MIA - Paris-Saclay 4",
-    "text": "L’unité MIA - Paris-Saclay 4\nVoir Partial_Network_Co-authors_ManagHAL.html"
-  },
-  {
-    "objectID": "presentation.html#lunité-mia---paris-saclay-5",
-    "href": "presentation.html#lunité-mia---paris-saclay-5",
-    "title": "Manipulation de données bibliométriques via {managHAL}",
-    "section": "L’unité MIA - Paris-Saclay 5",
-    "text": "L’unité MIA - Paris-Saclay 5"
+    "text": "L’unité MIA - Paris-Saclay 3"
   },
   {
     "objectID": "presentation.html#sources",

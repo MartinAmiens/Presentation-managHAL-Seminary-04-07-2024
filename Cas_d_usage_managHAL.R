@@ -54,7 +54,7 @@ url_HAL_all <-  HAL_query(id = cleaned_table_url$idhal,
 url_HAL_all
 
 #### ---------------------------------------------------------------------------
-## __ Function Production_table (in development)__ ##
+## __ Function Production_table (in development) __ ##
 
 mia_csv_prod <- production_table(dates_min = date_min,
                                  dates_max = date_max,

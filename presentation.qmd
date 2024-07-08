@@ -36,6 +36,8 @@ library(tibble, quietly = TRUE)
 -   Accessibilité et généricité de {managHAL}
 -   introduction aux Réseaux
 -   Ajout de fonctionnalités à {managHAL}
+-   Cas d'usage
+-   Questions
 -   Perspectives et avenir du package
 
 ## Contexte {.center}
@@ -234,18 +236,6 @@ knitr::kable(head(mia_url)[,1:6])
 ```
 
 
-```{r chargement publis a patir de table rh, eval=FALSE}
-#| code-fold: true
-managHAL::HAL_extract_csv()
-```
-
-
-```{r chargement partir de id structure, eval=FALSE}
-#| code-fold: true
-managHAL::HAL_extract_csv()
-```
-
-
 ## L'unité MIA - Paris-Saclay 2
 
 
@@ -256,30 +246,11 @@ managHAL::HAL_build_report()
 
 <center>
 
-<iframe src="docs/aubert_julie_.html"> </iframe>
+<iframe src="aubert_julie_.html" width="100%" height="650px"> </iframe>
 
 </center>
 
 ## L'unité MIA - Paris-Saclay 3
-
-
-```{r fonction de nettoyage de donnees, eval=FALSE}
-#| code-fold: true
-
-managHAL::find_inconsistent_ids()
-
-managHAL::find_inconsistent_names_ids()
-
-```
-
-
-## L'unité MIA - Paris-Saclay 4
-
-Voir Partial_Network_Co-authors_ManagHAL.html
-
-
-
-## L'unité MIA - Paris-Saclay 5
 
 <center>
 
