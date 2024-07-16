@@ -211,7 +211,7 @@ Voir Cas_d_usage_managHAL.R
 
 ## L'unité MIA - Paris-Saclay 1
 
-```{r chargement de la table RH depuis un url}
+```{r chargement de la table RH depuis un fichier local}
 
 #| code-fold: true
 #| 
@@ -219,9 +219,9 @@ Voir Cas_d_usage_managHAL.R
 date_min = "01/01/2022"
 date_max = "01/01/2023"
 
-mia_url <- managHAL:::load_team_table(filter_id = FALSE, date_cols = c(7, 8), "https://seafile.agroparistech.fr/f/cb25bc4e071d43ffb5fb/?dl=1")
+mia_table <- managHAL:::load_team_table(filter_id = FALSE, date_cols = c(7, 8), "./data/Data_RH_Example.csv")
 
-cleaned_mia <- mia_url %>% 
+cleaned_mia <- mia_table %>% 
   dplyr::filter(!is.na(idhal) & as.numeric(idhal)==idhal) %>% # on retire les faux idHal et les NA
   # puis filtre sur les dates 
   dplyr::mutate(debut_periode = managHAL:::borne_date(debut_contrat,
@@ -232,7 +232,7 @@ cleaned_mia <- mia_url %>%
 ```
 
 ```{r show-mia, echo=FALSE, results='asis'}
-knitr::kable(head(mia_url)[,1:6])
+knitr::kable(head(mia_table)[,1:6])
 ```
 
 
